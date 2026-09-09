@@ -3,51 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafeLife — Pre-Schooler (3–6 Years) · PRO</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>SafeLife - Pre-Schooler (3–6 Years) · PRO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,380..600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ═══════════ THEME ENGINE ═══════════ */
 :root {
-  --navy:#0D1B2A; --navy-mid:#1A2F45;
-  --critical:#DC2626; --high:#EA580C; --medium:#D97706; --low:#16A34A;
+  --navy:#23281B; --navy-mid:#2B3122;
+  --critical:#A8402C; --high:#B08968; --medium:#B99A5B; --low:#52604E;
+  --accent:#6E7F6A; --accent-dark:#52604E; --accent-rgb:110,127,106;
   --radius:12px;
-  --shadow:0 2px 12px rgba(13,27,42,0.08);
-  --shadow-lg:0 8px 32px rgba(13,27,42,0.14);
+  --shadow:0 1px 2px rgba(35,40,28,.07), 0 18px 36px -20px rgba(35,40,28,.24);
+  --shadow-lg:0 10px 32px -10px rgba(35,40,28,.28);
 }
-body[data-theme="pink"]   { --accent:#EC4899; --accent-dark:#DB2777; --accent-rgb:236,72,153; }
-body[data-theme="teal"]   { --accent:#14B8A6; --accent-dark:#0D9488; --accent-rgb:20,184,166; }
-body[data-theme="amber"]  { --accent:#F59E0B; --accent-dark:#D97706; --accent-rgb:245,158,11; }
-body[data-theme="rose"]   { --accent:#E11D48; --accent-dark:#BE123C; --accent-rgb:225,29,72; }
-body[data-theme="violet"] { --accent:#7C3AED; --accent-dark:#6D28D9; --accent-rgb:124,58,237; }
-body[data-theme="ocean"]  { --accent:#2563EB; --accent-dark:#1D4ED8; --accent-rgb:37,99,235; }
-body[data-theme="forest"] { --accent:#16A34A; --accent-dark:#15803D; --accent-rgb:22,163,74; }
 body[data-mode="light"] {
-  --bg:#F9F6F0; --surface:#FFFFFF; --surface-2:#EDE6D6; --tile:#F9F6F0;
-  --ink:#0D1B2A; --ink-mid:#3A4A5C; --ink-soft:#6B7A8D; --line:#EDE6D6;
-  --critical-bg:#FEF2F2; --high-bg:#FFF7ED; --medium-bg:#FFFBEB; --low-bg:#F0FDF4;
+  --bg:#EAF0E7; --surface:#FBFAF6; --surface-2:#E1E9DD; --tile:#F1F5EC;
+  --ink:#2E3229; --ink-mid:#454B3E; --ink-soft:#5E6357; --line:#D6E0D1;
+  --critical-bg:#F7E9E3; --high-bg:#F5EDE2; --medium-bg:#F7F0DE; --low-bg:#E7EDE2;
 }
 body[data-mode="dark"] {
-  --bg:#0B1420; --surface:#13202F; --surface-2:#1C2C3E; --tile:#0F1A28;
-  --ink:#EDF2F7; --ink-mid:#B7C4D1; --ink-soft:#8194A7; --line:#243549;
-  --critical-bg:rgba(220,38,38,.16); --high-bg:rgba(234,88,12,.16);
-  --medium-bg:rgba(217,119,6,.16); --low-bg:rgba(22,163,74,.16);
-  --shadow:0 2px 12px rgba(0,0,0,0.35); --shadow-lg:0 8px 32px rgba(0,0,0,0.5);
+  --bg:#14180F; --surface:#1B2116; --surface-2:#212A1B; --tile:#1F2618;
+  --ink:#EAEFE4; --ink-mid:#C7D0BE; --ink-soft:#B7C0AE; --line:#2C3624;
+  --critical-bg:rgba(216,120,96,.16); --high-bg:rgba(201,164,131,.16);
+  --medium-bg:rgba(210,184,118,.16); --low-bg:rgba(156,176,150,.16);
+  --shadow:0 1px 2px rgba(0,0,0,.4); --shadow-lg:0 10px 32px -10px rgba(0,0,0,.55);
 }
+body[data-mode="dark"] { --critical:#D97E68; --high:#C9A483; --medium:#D2B876; --low:#9CB096;
+  --accent:#9CB096; --accent-dark:#7E9478; --accent-rgb:156,176,150; }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;}
+body{font-family:'Public Sans',-apple-system,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;}
 
 /* ═══════════ TOP BAR ═══════════ */
-.topbar{background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 20px;min-height:58px;position:relative;z-index:300;border-bottom:2px solid var(--accent);flex-wrap:wrap;}
+.topbar{background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 22px;min-height:58px;position:relative;z-index:300;border-bottom:1px solid rgba(255,255,255,.08);flex-wrap:wrap;}
 .topbar-brand{display:flex;align-items:center;gap:12px;}
-.topbar-logo{width:34px;height:34px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;font-family:'Sora',sans-serif;color:#fff;box-shadow:0 2px 8px rgba(var(--accent-rgb),.4);}
-.topbar-name{font-family:'Sora',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.3px;}
+.topbar-logo{width:34px;height:34px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;font-family:'Fraunces',sans-serif;color:#fff;box-shadow:0 2px 8px rgba(var(--accent-rgb),.4);}
+.topbar-name{font-family:'Fraunces',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.3px;}
 .topbar-name span{color:var(--accent);}
 .topbar-tagline{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;}
 .topbar-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
 .progress-pill{background:rgba(var(--accent-rgb),.15);border:1px solid rgba(var(--accent-rgb),.3);border-radius:20px;padding:4px 14px;font-size:12px;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:6px;white-space:nowrap;}
 .progress-pill span{color:#fff;font-size:13px;}
 .toolbar{display:flex;gap:6px;flex-wrap:wrap;}
-.tool-btn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:8px;padding:6px 10px;font-size:13px;cursor:pointer;font-family:'Inter',sans-serif;font-weight:600;display:flex;align-items:center;gap:5px;transition:all .2s;position:relative;}
+.tool-btn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:8px;padding:6px 10px;font-size:13px;cursor:pointer;font-family:'Public Sans',sans-serif;font-weight:600;display:flex;align-items:center;gap:5px;transition:all .2s;position:relative;}
 .tool-btn:hover{background:rgba(var(--accent-rgb),.3);border-color:var(--accent);}
 .tool-btn .tb-label{font-size:11px;}
 @media(max-width:820px){.tool-btn .tb-label{display:none;}.topbar-tagline{display:none;}}
@@ -56,7 +53,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 .dropdown{position:absolute;top:calc(100% + 8px);right:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-lg);padding:10px;display:none;z-index:400;min-width:190px;}
 .dropdown.open{display:block;}
 .dropdown-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--ink-soft);padding:4px 8px 8px;}
-.theme-row{display:flex;align-items:center;gap:10px;width:100%;padding:8px;border:none;background:none;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:var(--ink);text-align:left;}
+.theme-row{display:flex;align-items:center;gap:10px;width:100%;padding:8px;border:none;background:none;border-radius:8px;cursor:pointer;font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600;color:var(--ink);text-align:left;}
 .theme-row:hover{background:rgba(var(--accent-rgb),.08);}
 .theme-row.selected{background:rgba(var(--accent-rgb),.12);}
 .theme-swatch{width:18px;height:18px;border-radius:6px;flex-shrink:0;}
@@ -66,31 +63,31 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,#3a0a29 100%);padding:48px 32px 40px;text-align:center;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(var(--accent-rgb),.14) 0%,transparent 60%);}
 .hero-emoji{font-size:64px;line-height:1;margin-bottom:12px;display:block;position:relative;}
-.hero-title{font-family:'Sora',sans-serif;font-size:32px;font-weight:800;color:#fff;margin-bottom:6px;position:relative;}
+.hero-title{font-family:'Fraunces',sans-serif;font-size:32px;font-weight:800;color:#fff;margin-bottom:6px;position:relative;}
 .hero-subtitle{font-size:15px;color:rgba(255,255,255,.65);margin-bottom:20px;position:relative;}
 .hero-badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;position:relative;}
 .hero-badge{background:rgba(var(--accent-rgb),.15);border:1px solid rgba(var(--accent-rgb),.35);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:5px;cursor:pointer;transition:background .2s,transform .15s;user-select:none;}
 .hero-badge:hover{background:rgba(var(--accent-rgb),.28);transform:translateY(-1px);}
 
 /* ═══════════ PROGRESS ═══════════ */
-.progress-section{background:var(--surface);border-bottom:1px solid var(--line);padding:0 32px;height:46px;display:flex;align-items:center;gap:20px;position:sticky;top:0;z-index:290;box-shadow:0 2px 8px rgba(13,27,42,.06);}
+.progress-section{background:var(--surface);border-bottom:1px solid var(--line);padding:0 32px;height:46px;display:flex;align-items:center;gap:20px;position:sticky;top:0;z-index:290;box-shadow:var(--shadow);}
 .progress-label{font-size:12px;font-weight:600;color:var(--ink-soft);white-space:nowrap;}
 .progress-track{flex:1;height:8px;background:var(--surface-2);border-radius:4px;overflow:hidden;}
 .progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-dark));border-radius:4px;width:0%;transition:width .4s ease;}
 .progress-count{font-size:13px;font-weight:700;color:var(--accent);white-space:nowrap;}
-.celebrate{display:none;background:linear-gradient(135deg,rgba(var(--accent-rgb),.15),rgba(var(--accent-rgb),.05));border-bottom:1px solid rgba(var(--accent-rgb),.3);padding:14px 32px;text-align:center;font-weight:700;color:var(--accent-dark);font-size:15px;font-family:'Sora',sans-serif;}
+.celebrate{display:none;background:linear-gradient(135deg,rgba(var(--accent-rgb),.15),rgba(var(--accent-rgb),.05));border-bottom:1px solid rgba(var(--accent-rgb),.3);padding:14px 32px;text-align:center;font-weight:700;color:var(--accent-dark);font-size:15px;font-family:'Fraunces',sans-serif;}
 .celebrate.show{display:block;}
 
 /* ═══════════ SEARCH ═══════════ */
 .search-wrap{padding:20px 20px 0;max-width:860px;margin:0 auto;}
-.search-box{width:100%;padding:10px 16px 10px 40px;border:1px solid var(--line);border-radius:8px;background:var(--surface);font-size:14px;font-family:'Inter',sans-serif;color:var(--ink);outline:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7A8D' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:12px center;transition:border-color .2s;}
+.search-box{width:100%;padding:10px 16px 10px 40px;border:1px solid var(--line);border-radius:8px;background:var(--surface);font-size:14px;font-family:'Public Sans',sans-serif;color:var(--ink);outline:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7A8D' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:12px center;transition:border-color .2s;}
 .search-box:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(var(--accent-rgb),.1);}
 .search-no-results{text-align:center;padding:40px;color:var(--ink-soft);font-size:14px;display:none;}
 
 /* ═══════════ ZONE TABS ═══════════ */
 .zone-tabs{background:var(--surface);border-bottom:2px solid var(--line);display:flex;overflow-x:auto;padding:0 24px;gap:4px;scrollbar-width:none;position:sticky;top:46px;z-index:200;}
 .zone-tabs::-webkit-scrollbar{display:none;}
-.zone-tab{display:flex;align-items:center;gap:7px;padding:14px 18px;border:none;background:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:var(--ink-soft);white-space:nowrap;border-bottom:3px solid transparent;transition:all .2s;margin-bottom:-2px;}
+.zone-tab{display:flex;align-items:center;gap:7px;padding:14px 18px;border:none;background:none;cursor:pointer;font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600;color:var(--ink-soft);white-space:nowrap;border-bottom:3px solid transparent;transition:all .2s;margin-bottom:-2px;}
 .zone-tab:hover{color:var(--accent);background:rgba(var(--accent-rgb),.05);}
 .zone-tab.active{color:var(--accent);border-bottom-color:var(--accent);}
 .zone-tab-count{background:var(--surface-2);border-radius:10px;padding:1px 7px;font-size:11px;font-weight:700;color:var(--ink-soft);}
@@ -113,8 +110,8 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 .zone-panel{display:none;}
 .zone-panel.active{display:block;}
 .zone-header{display:flex;align-items:center;gap:14px;margin-bottom:24px;padding:20px 24px;background:var(--surface);border-radius:var(--radius);border:1px solid rgba(var(--accent-rgb),.2);box-shadow:var(--shadow);}
-.zone-icon{width:52px;height:52px;background:linear-gradient(135deg,rgba(var(--accent-rgb),.12),rgba(var(--accent-rgb),.06));border:2px solid rgba(var(--accent-rgb),.25);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;}
-.zone-header-text h2{font-family:'Sora',sans-serif;font-size:20px;font-weight:700;color:var(--ink);margin-bottom:3px;}
+.zone-icon{width:52px;height:52px;background:rgba(var(--accent-rgb),.08);border:1px solid rgba(var(--accent-rgb),.28);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;}
+.zone-header-text h2{font-family:'Fraunces',sans-serif;font-size:20px;font-weight:700;color:var(--ink);margin-bottom:3px;}
 .zone-header-text p{font-size:13px;color:var(--ink-soft);}
 
 /* ═══════════ CHECK CARDS ═══════════ */
@@ -125,7 +122,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 .check-header{display:flex;align-items:center;gap:12px;padding:14px 18px;cursor:pointer;user-select:none;}
 .check-checkbox{width:22px;height:22px;min-width:22px;border:2px solid var(--surface-2);border-radius:6px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;font-size:13px;background:var(--surface);}
 .check-card.completed .check-checkbox{background:var(--accent);border-color:var(--accent);color:#fff;}
-.check-num{font-size:10px;font-weight:700;color:var(--ink-soft);min-width:30px;font-family:'Sora',sans-serif;}
+.check-num{font-size:10px;font-weight:700;color:var(--ink-soft);min-width:30px;font-family:'Fraunces',sans-serif;}
 .check-risk{font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;}
 .risk-critical{background:var(--critical-bg);color:var(--critical);}
 .risk-high{background:var(--high-bg);color:var(--high);}
@@ -149,27 +146,27 @@ body[data-mode="dark"] .detail-label{color:var(--accent);}
 .tip-text{font-size:13px;color:var(--ink);line-height:1.55;}
 .tip-text strong{color:var(--accent-dark);font-weight:700;}
 body[data-mode="dark"] .tip-text strong{color:var(--accent);}
-.measurement-box{margin-top:10px;background:rgba(var(--accent-rgb),.05);border:1px solid var(--line);border-radius:8px;padding:10px 13px;font-size:12px;color:var(--ink-mid);line-height:1.5;font-family:'Sora',sans-serif;}
+.measurement-box{margin-top:10px;background:rgba(var(--accent-rgb),.05);border:1px solid var(--line);border-radius:8px;padding:10px 13px;font-size:12px;color:var(--ink-mid);line-height:1.5;font-family:'Fraunces',sans-serif;}
 .measurement-box strong{color:var(--ink);font-size:11px;text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:3px;}
 
 /* ═══════════ ZONE ACTIONS ═══════════ */
 .zone-actions{display:flex;justify-content:flex-end;gap:10px;margin:14px 0 18px;flex-wrap:wrap;}
-.btn{padding:9px 18px;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer;border:none;transition:all .2s;}
+.btn{padding:9px 18px;border-radius:8px;font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;border:none;transition:all .2s;}
 .btn-outline{background:var(--surface);border:1px solid var(--line);color:var(--ink-mid);}
 .btn-outline:hover{border-color:var(--accent);color:var(--accent);}
 .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;box-shadow:0 2px 8px rgba(var(--accent-rgb),.3);}
 .btn-primary:hover{box-shadow:0 4px 16px rgba(var(--accent-rgb),.4);transform:translateY(-1px);}
 
 /* ═══════════ MODALS ═══════════ */
-.modal-overlay{position:fixed;inset:0;background:rgba(13,27,42,.6);z-index:500;display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto;backdrop-filter:blur(3px);}
+.modal-overlay{position:fixed;inset:0;background:rgba(35,40,27,.55);z-index:500;display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto;backdrop-filter:blur(3px);}
 .modal-overlay.open{display:flex;}
 .modal{background:var(--surface);border-radius:16px;max-width:640px;width:100%;box-shadow:var(--shadow-lg);border-top:4px solid var(--accent);}
 .modal-head{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--line);}
-.modal-head h3{font-family:'Sora',sans-serif;font-size:18px;color:var(--ink);display:flex;align-items:center;gap:8px;}
+.modal-head h3{font-family:'Fraunces',sans-serif;font-size:18px;color:var(--ink);display:flex;align-items:center;gap:8px;}
 .modal-close{background:none;border:none;font-size:22px;color:var(--ink-soft);cursor:pointer;line-height:1;padding:4px;}
 .modal-close:hover{color:var(--accent);}
 .modal-body{padding:20px 24px 26px;color:var(--ink-mid);font-size:13.5px;}
-.modal-body h4{font-family:'Sora',sans-serif;font-size:14px;color:var(--ink);margin:16px 0 6px;display:flex;align-items:center;gap:6px;}
+.modal-body h4{font-family:'Fraunces',sans-serif;font-size:14px;color:var(--ink);margin:16px 0 6px;display:flex;align-items:center;gap:6px;}
 .modal-body h4:first-child{margin-top:0;}
 .modal-body p{margin-bottom:8px;}
 .modal-body table{width:100%;border-collapse:collapse;font-size:12.5px;margin:8px 0;}
@@ -183,13 +180,13 @@ body[data-mode="dark"] .tip-text strong{color:var(--accent);}
 
 /* ═══════════ COLLECTION / UPSELL ═══════════ */
 .collection{max-width:860px;margin:0 auto;padding:10px 20px 50px;}
-.collection h3{font-family:'Sora',sans-serif;font-size:18px;color:var(--ink);margin-bottom:4px;}
+.collection h3{font-family:'Fraunces',sans-serif;font-size:18px;color:var(--ink);margin-bottom:4px;}
 .collection>p{font-size:13px;color:var(--ink-soft);margin-bottom:16px;}
 .collection-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;}
 .module-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px;transition:all .2s;}
 .module-card:hover{border-color:var(--accent);box-shadow:var(--shadow);}
 .module-card .m-emoji{font-size:26px;}
-.module-card .m-name{font-family:'Sora',sans-serif;font-weight:700;font-size:13.5px;color:var(--ink);}
+.module-card .m-name{font-family:'Fraunces',sans-serif;font-weight:700;font-size:13.5px;color:var(--ink);}
 .module-card .m-age{font-size:11.5px;color:var(--ink-soft);}
 .module-tag{margin-top:6px;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-radius:6px;padding:3px 8px;align-self:flex-start;}
 .module-tag.owned{background:rgba(var(--accent-rgb),.15);color:var(--accent-dark);}
@@ -237,10 +234,10 @@ body[data-mode="dark"] .float-btn{color:var(--accent);}
   body.print-cheat .main,body.print-cheat .footer,body.print-cheat .zone-panel,body.print-cheat .print-disclaimer{display:none !important;}
   body.print-cheat #cheat-print{display:block !important;}
   #cheat-print{margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-  .cp-card{border:2.5px solid #0D1B2A;border-radius:16px;overflow:hidden;font-family:'Inter',sans-serif;color:#0D1B2A;height:272mm;display:flex;flex-direction:column;page-break-inside:avoid;page-break-after:avoid;}
-  .cp-head{background:#0D1B2A !important;color:#fff;display:flex;align-items:center;gap:12px;padding:13px 22px;}
+  .cp-card{border:2.5px solid #23281B;border-radius:16px;overflow:hidden;font-family:'Public Sans',sans-serif;color:#23281B;height:272mm;display:flex;flex-direction:column;page-break-inside:avoid;page-break-after:avoid;}
+  .cp-head{background:#23281B !important;color:#fff;display:flex;align-items:center;gap:12px;padding:13px 22px;}
   .cp-head svg{width:38px;height:38px;color:var(--accent);}
-  .cp-title{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;line-height:1.2;}
+  .cp-title{font-family:'Fraunces',sans-serif;font-size:20px;font-weight:800;line-height:1.2;}
   .cp-title em{color:var(--accent);font-style:normal;}
   .cp-sub{font-size:11.5px;color:rgba(255,255,255,.78);margin-top:2px;}
   .cp-tag{margin-left:auto;font-size:10px;font-style:italic;color:rgba(255,255,255,.65);text-align:right;}
@@ -249,7 +246,7 @@ body[data-mode="dark"] .float-btn{color:var(--accent);}
   .cp-chip b{display:block;font-size:8.5px;text-transform:uppercase;letter-spacing:.3px;color:var(--accent-dark);}
   .cp-chip span{font-size:12px;font-weight:700;}
   .cp-cols{display:flex;gap:20px;padding:13px 22px 6px;flex:1;min-height:0;overflow:hidden;}
-  .cp-cols h3{font-family:'Sora',sans-serif;font-size:13px;border-bottom:2px solid var(--accent);padding-bottom:3px;margin:0 0 8px;}
+  .cp-cols h3{font-family:'Fraunces',sans-serif;font-size:13px;border-bottom:2px solid var(--accent);padding-bottom:3px;margin:0 0 8px;}
   .cp-rules{flex:1.15;}
   .cp-rules ul{list-style:none;margin:0;padding:0;}
   .cp-rules li{font-size:11px;line-height:1.5;padding:4px 0 4px 18px;position:relative;border-bottom:1px dashed #ddd;}
@@ -259,10 +256,10 @@ body[data-mode="dark"] .float-btn{color:var(--accent);}
   .cp-numsec{flex:1;}
   .cp-numsec table{width:100%;border-collapse:collapse;font-size:10.5px;}
   .cp-numsec td{border-bottom:1px solid #eee;padding:4px 5px;vertical-align:top;}
-  .cp-numsec td strong{color:#0D1B2A;}
+  .cp-numsec td strong{color:#23281B;}
   .cp-notes{margin:6px 22px 10px;border:1.5px dashed var(--accent);border-radius:10px;padding:8px 13px;font-size:11px;white-space:pre-wrap;max-height:34mm;overflow:hidden;}
   .cp-notes b{font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--accent-dark);display:block;margin-bottom:2px;}
-  .cp-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#0D1B2A !important;color:rgba(255,255,255,.85);padding:9px 22px;font-size:10px;line-height:1.55;margin-top:auto;}
+  .cp-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#23281B !important;color:rgba(255,255,255,.85);padding:9px 22px;font-size:10px;line-height:1.55;margin-top:auto;}
   .cp-foot b{color:var(--accent);}
   .cp-qr{display:flex;align-items:center;gap:10px;text-align:right;}
   .cp-qr img{width:68px;height:68px;background:#fff;border-radius:8px;padding:3px;}
@@ -273,9 +270,30 @@ body[data-mode="dark"] .float-btn{color:var(--accent);}
   .print-disclaimer{display:block !important;position:fixed;bottom:0;left:0;right:0;text-align:center;font-size:8.5px;color:#666;border-top:1px solid #ccc;padding:3px 0;background:#fff;}
   @page{size:A4;margin:10mm 10mm 12mm;}
 }
+
+/* ---------- Snag Tag brand pass: mono labels + framed hero portrait ---------- */
+.topbar-tagline{font-family:'Public Sans',sans-serif;font-style:normal;letter-spacing:.01em;}
+.progress-pill,.check-num,.check-risk,.zone-tab-count,.detail-label,.stat-count,
+.progress-count,.progress-label,.m-age,.mono{
+  font-family:'IBM Plex Mono',ui-monospace,monospace;
+}
+.check-risk{letter-spacing:.06em;}
+.footer{font-family:'Public Sans',sans-serif;letter-spacing:.01em;}
+
+.hero-kicker{
+  display:inline-block; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); margin-bottom:16px; position:relative;
+}
+.hero-portrait{
+  width:132px; margin:0 auto 18px; border-radius:14px; overflow:hidden; position:relative;
+  border:1px solid rgba(var(--accent-rgb),.4); box-shadow:0 14px 30px -12px rgba(0,0,0,.5);
+}
+.hero-portrait img{display:block; width:100%; height:auto; aspect-ratio:560/414; object-fit:cover;}
+.hero-emoji{display:none;}
+@media(max-width:640px){ .hero-portrait{width:104px;} }
 </style>
 </head>
-<body data-theme="pink" data-mode="light">
+<body data-mode="light">
 
 <!-- TOP BAR -->
 <header class="topbar">
@@ -297,9 +315,6 @@ body[data-mode="dark"] .float-btn{color:var(--accent);}
       <button class="tool-btn" id="btn-lang" title="Language" style="display:none">🌐<span class="tb-label" id="lang-label">EN</span>
         <div class="dropdown" id="dd-lang"></div>
       </button>
-      <button class="tool-btn" id="btn-theme" title="Colour theme">🎨<span class="tb-label" data-i18n="theme">Theme</span>
-        <div class="dropdown" id="dd-theme"></div>
-      </button>
       <button class="tool-btn" id="btn-mode" title="Light / dark mode">🌙</button>
     </div>
     <div class="progress-pill"><span id="topbar-done">0</span>&nbsp;/ 84 <span data-i18n="checksDone" style="color:inherit;font-size:12px;">checks done</span></div>
@@ -308,9 +323,12 @@ body[data-mode="dark"] .float-btn{color:var(--accent);}
 
 <!-- HERO -->
 <div class="hero">
+  <div class="hero-portrait"><img src="data:image/webp;base64,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" alt="PreSchooler safety module, The Snag Tag SafeLife collection" loading="lazy" width="560" height="414"></div>
+  <span class="hero-kicker mono">SafeLife - Age Group Collection · Child, 3–6 yrs</span>
   <span class="hero-emoji" id="hero-icon">🧒</span>
-  <div class="hero-title" data-i18n="heroTitle">Pre-Schooler Safety — 3 to 6 Years</div>
+  <div class="hero-title" data-i18n="heroTitle">Pre-Schooler Safety - 3 to 6 Years</div>
   <div class="hero-subtitle" data-i18n="heroSub">84 evidence-based safety checks across 6 zones · Pre-schoolers are curious, mobile and starting to test boundaries and the world beyond home</div>
+  <p class="hero-disclaimer" style="font-size:0.72rem; opacity:0.65; margin-top:6px; max-width:640px;">This guide provides general safety information and is not a substitute for professional advice. Always consult a qualified childproofing professional, pediatrician, or the manufacturer instructions for your specific products and situation.</p>
   <div class="hero-badges">
     <div class="hero-badge" data-zone="1"><span class="zic" data-zi="z1"></span> <span data-i18n="bz1">Bedroom &amp; Home</span></div>
     <div class="hero-badge" data-zone="2"><span class="zic" data-zi="z2"></span> <span data-i18n="bz2">Kitchen &amp; Mealtime</span></div>
@@ -327,7 +345,7 @@ body[data-mode="dark"] .float-btn{color:var(--accent);}
   <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
   <div class="progress-count" id="progress-count">0 of 84</div>
 </div>
-<div class="celebrate" id="celebrate">🎉 <span data-i18n="celebrate">All 84 checks complete — your home is SafeLife certified! Print your checklist as a keepsake.</span></div>
+<div class="celebrate" id="celebrate">🎉 <span data-i18n="celebrate">All 84 checks complete - your home is SafeLife certified! Print your checklist as a keepsake.</span></div>
 
 <!-- SEARCH -->
 <div class="search-wrap">
@@ -362,14 +380,14 @@ body[data-mode="dark"] .float-btn{color:var(--accent);}
 <!-- COLLECTION -->
 <div class="collection">
   <h3 data-i18n="collTitle">The SafeLife Collection</h3>
-  <p data-i18n="collSub">One safety system for every stage of life. Add more modules any time — each works exactly like this one.</p>
+  <p data-i18n="collSub">One safety system for every stage of life. Add more modules any time - each works exactly like this one.</p>
   <div class="collection-grid" id="collection-grid"></div>
 </div>
 
 <!-- SITUATION MODULES -->
 <div class="collection" style="padding-top:0;">
   <h3>Situation Modules</h3>
-  <p>Real-life situations and conditions — each its own complete, standalone 84-check system. Available separately as they launch.</p>
+  <p>Real-life situations and conditions - each its own complete, standalone 84-check system. Available separately as they launch.</p>
   <div class="collection-grid" id="situation-grid"></div>
 </div>
 
@@ -409,7 +427,7 @@ body[data-mode="dark"] .float-btn{color:var(--accent);}
     <div class="modal-head"><h3>🖨️ <span data-i18n="printTitle">Print or Save as PDF</span></h3><button class="modal-close" data-close="modal-print">✕</button></div>
     <div class="modal-body">
       <p data-i18n="printHint">Choose what to print. To save as a PDF instead of printing on paper, choose "Save as PDF" as the printer in the print dialog.</p>
-      <p style="font-size:12.5px;color:var(--ink-soft);margin-top:6px;" data-i18n="printNote">All checks are automatically expanded to full detail when printing — no need to open them first.</p>
+      <p style="font-size:12.5px;color:var(--ink-soft);margin-top:6px;" data-i18n="printNote">All checks are automatically expanded to full detail when printing - no need to open them first.</p>
     </div>
     <div class="modal-actions">
       <button class="btn btn-outline" id="print-zone" data-i18n="printZone">Current zone only</button>
@@ -435,22 +453,22 @@ body[data-mode="dark"] .float-btn{color:var(--accent);}
 
 <script>
 // ═══════════════════════════════════════════
-// SELLER BRANDING — edit these three lines to make it yours
+// SELLER BRANDING - edit these three lines to make it yours
 // ═══════════════════════════════════════════
 const BRAND_NAME = 'The Snag Tag';
-const STORE_URL  = '';   // e.g. 'thesnagtag.gumroad.com' — printed under the QR code on the cheat sheet
+const STORE_URL  = '';   // e.g. 'thesnagtag.gumroad.com' - printed under the QR code on the cheat sheet
 const QR_IMAGE   = '';   // paste your QR code as a data URL: 'data:image/png;base64,...'
 
 // ═══════════════════════════════════════════
-// I18N — full interface language packs (check content in English, verified guidance)
+// I18N - full interface language packs (check content in English, verified guidance)
 // ═══════════════════════════════════════════
 const I18N = {
-en:{name:'English',manual:'Manual',cheat:'Cheat Sheet',printPdf:'Print / PDF',save:'Save',load:'Load',theme:'Theme',checksDone:'checks done',heroTitle:'Pre-Schooler Safety — 3 to 6 Years',heroSub:'84 evidence-based safety checks across 6 zones · Pre-schoolers are curious, mobile and starting to test boundaries and the world beyond home',bz1:'Bedroom & Home',bz2:'Kitchen & Mealtime',bz3:'Water & Pool Safety',bz4:'Body Safety & Emotions',bz5:'Garden & Playground',bz6:'Road & Travel',overallProgress:'Overall Progress',ofWord:'of',z1:'Bedroom, Home & Fire Safety',z2:'Kitchen, Mealtime & Allergies',z3:'Bathroom, Water & Pool Safety',z4:'Body Safety, Emotions & Digital Life',z5:'Outdoor, Garden & Playground',z6:'Road, Travel & Car Seat Safety',zd1:'14 checks: room independence, furniture anchoring, window safety, button batteries, medicine storage and fire escape planning.',zd2:'14 checks: choking on harder foods, kitchen involvement, knives, hot drinks, allergy management and packed-lunch safety.',zd3:'14 checks: bath supervision, pool fencing, open water, swimming competence, scalds and medicine cabinets.',zd4:'14 checks: NSPCC PANTS body safety, stranger awareness, screen time, online safety, emotional regulation and separation anxiety.',zd5:'14 checks: playground equipment, bicycles and scooters, garden hazards, sun safety, pets and toxic plants.',zd6:'14 checks: car seat transitions, road crossing, walking to nursery or school, hot cars and travel safety.',critical:'Critical',high:'High',medium:'Medium',low:'Low',legendCritical:'Critical = immediate action',legendHigh:'High = urgent attention',noResults:'No checks match your search. Try different keywords.',searchPh:'Search checks… e.g. pool fence, scooter helmet, PANTS, car seat, sun cream…',who:'Who',what:'What',where:'Where',why:'Why',how:'How',standards:'Standards & Measurements',example:'Real-World Example',quickTip:'Quick Win',markAll:'Mark All Complete',unmarkAll:'Unmark All',expandAll:'Expand All',collapseAll:'Collapse All',celebrate:'All 84 checks complete — your home is SafeLife certified! Print your checklist as a keepsake.',collTitle:'The SafeLife Collection',collSub:'One safety system for every stage of life. Every module below is a complete, standalone 84-check system — available separately, or as the full 12-module bundle.',owned:'✓ Current Module',addon:'Available Separately',disclaimer:'This checklist is educational and does not replace professional medical advice. Always consult your doctor or health professional.',manualTitle:'User Manual',cheatTitle:'Emergency Cheat Sheet',printTitle:'Print or Save as PDF',printHint:'Choose what to print. To save as a PDF instead of printing on paper, choose "Save as PDF" as the printer in the print dialog.',printZone:'Current zone only',printCheat2:'Cheat sheet',printAll:'Full checklist (all 84)',printCheat:'🖨️ Print cheat sheet',langNote:'Safety check content is written in English (verified international guidance). Interface labels switch language.',saved:'Progress saved',loaded:'Progress loaded',cheatContacts:'My emergency contacts',cheatHint:'Make it yours: edit any name or number, add or delete rows. Everything saves automatically on this device and prints on your cheat sheet.',addContact:'+ Add contact',myNotes:'My notes',notesPh:'Allergies, medication, door codes for babysitters, your address for emergency calls…',rules:'The 10 golden rules',keyNums:'Key measurements at a glance',delRow:'Remove',notCovered:'Topic not covered in this module? Check the cheat sheet, ask your health professional, or request it via your SafeLife store page — new checks arrive in free updates.',printNote:'All checks are automatically expanded to full detail when printing — no need to open them first.',mn1:'Newborn',mn2:'Infant',mn3:'Toddler',mn4:'Preschooler',mn5:'School-Age',mn6:'Teenager',mn7:'Young Adult',mn8:'Adult',mn9:'Middle-Aged Adult',mn10:'Active Seniors',mn11:'Advanced Age',mn12:'90+ and Longevity',
-manualBody:'<h4>🚀 Getting started</h4><p>84 checks in 6 zones. Tap any check to see Who / What / Where / Why / How, exact measurements and standards, a real-world example and a quick-win tip.</p><h4>✅ Progress</h4><p>Tick the box to complete a check — bars and counters update instantly. Each zone has Mark All / Unmark All and Expand / Collapse All buttons, and the floating ↑ ↓ arrows jump between checks.</p><h4>🔍 Search &amp; filters</h4><p>The search box filters all 84 checks live across every zone. Tap a risk pill (Critical / High / Medium / Low) to filter by risk level; tap again to clear.</p><h4>🎨 Personalise</h4><p>Pick a colour theme and light or dark mode — remembered on this device. Make the cheat sheet yours: add your own emergency numbers and notes.</p><h4>💾 Save &amp; 🖨️ Print</h4><p>Progress saves automatically on this device as you go. To move your progress to another device or keep a backup, tap 💾 Save — this downloads a small file. On the new device (or after clearing your browser), open the same checklist, tap 📂 Load, and choose that file to restore your progress exactly where you left off. Keep the file somewhere safe, like your email or a notes app. Print the full checklist, one zone, or your personalised cheat sheet — all checks expand automatically when printing. Choose "Save as PDF" in the print dialog to create a PDF.</p>'}
+en:{name:'English',manual:'Manual',cheat:'Cheat Sheet',printPdf:'Print / PDF',save:'Save',load:'Load',theme:'Theme',checksDone:'checks done',heroTitle:'Pre-Schooler Safety - 3 to 6 Years',heroSub:'84 evidence-based safety checks across 6 zones · Pre-schoolers are curious, mobile and starting to test boundaries and the world beyond home',bz1:'Bedroom & Home',bz2:'Kitchen & Mealtime',bz3:'Water & Pool Safety',bz4:'Body Safety & Emotions',bz5:'Garden & Playground',bz6:'Road & Travel',overallProgress:'Overall Progress',ofWord:'of',z1:'Bedroom, Home & Fire Safety',z2:'Kitchen, Mealtime & Allergies',z3:'Bathroom, Water & Pool Safety',z4:'Body Safety, Emotions & Digital Life',z5:'Outdoor, Garden & Playground',z6:'Road, Travel & Car Seat Safety',zd1:'14 checks: room independence, furniture anchoring, window safety, button batteries, medicine storage and fire escape planning.',zd2:'14 checks: choking on harder foods, kitchen involvement, knives, hot drinks, allergy management and packed-lunch safety.',zd3:'14 checks: bath supervision, pool fencing, open water, swimming competence, scalds and medicine cabinets.',zd4:'14 checks: NSPCC PANTS body safety, stranger awareness, screen time, online safety, emotional regulation and separation anxiety.',zd5:'14 checks: playground equipment, bicycles and scooters, garden hazards, sun safety, pets and toxic plants.',zd6:'14 checks: car seat transitions, road crossing, walking to nursery or school, hot cars and travel safety.',critical:'Critical',high:'High',medium:'Medium',low:'Low',legendCritical:'Critical = immediate action',legendHigh:'High = urgent attention',noResults:'No checks match your search. Try different keywords.',searchPh:'Search checks… e.g. pool fence, scooter helmet, PANTS, car seat, sun cream…',who:'Who',what:'What',where:'Where',why:'Why',how:'How',standards:'Standards & Measurements',example:'Real-World Example',quickTip:'Quick Win',markAll:'Mark All Complete',unmarkAll:'Unmark All',expandAll:'Expand All',collapseAll:'Collapse All',celebrate:'All 84 checks complete - your home is SafeLife certified! Print your checklist as a keepsake.',collTitle:'The SafeLife Collection',collSub:'One safety system for every stage of life. Every module below is a complete, standalone 84-check system - available separately, or as the full 12-module bundle.',owned:'✓ Current Module',addon:'Available Separately',disclaimer:'This checklist is educational and does not replace professional medical advice. Always consult your doctor or health professional.',manualTitle:'User Manual',cheatTitle:'Emergency Cheat Sheet',printTitle:'Print or Save as PDF',printHint:'Choose what to print. To save as a PDF instead of printing on paper, choose "Save as PDF" as the printer in the print dialog.',printZone:'Current zone only',printCheat2:'Cheat sheet',printAll:'Full checklist (all 84)',printCheat:'🖨️ Print cheat sheet',langNote:'Safety check content is written in English (verified international guidance). Interface labels switch language.',saved:'Progress saved',loaded:'Progress loaded',cheatContacts:'My emergency contacts',cheatHint:'Make it yours: edit any name or number, add or delete rows. Everything saves automatically on this device and prints on your cheat sheet.',addContact:'+ Add contact',myNotes:'My notes',notesPh:'Allergies, medication, door codes for babysitters, your address for emergency calls…',rules:'The 10 golden rules',keyNums:'Key measurements at a glance',delRow:'Remove',notCovered:'Topic not covered in this module? Check the cheat sheet, ask your health professional, or request it via your SafeLife store page - new checks arrive in free updates.',printNote:'All checks are automatically expanded to full detail when printing - no need to open them first.',mn1:'Newborn',mn2:'Infant',mn3:'Toddler',mn4:'Preschooler',mn5:'School-Age',mn6:'Teenager',mn7:'Young Adult',mn8:'Adult',mn9:'Middle-Aged Adult',mn10:'Active Seniors',mn11:'Advanced Age',mn12:'90+ and Longevity',
+manualBody:'<h4>🚀 Getting started</h4><p>84 checks in 6 zones. Tap any check to see Who / What / Where / Why / How, exact measurements and standards, a real-world example and a quick-win tip.</p><h4>✅ Progress</h4><p>Tick the box to complete a check - bars and counters update instantly. Each zone has Mark All / Unmark All and Expand / Collapse All buttons, and the floating ↑ ↓ arrows jump between checks.</p><h4>🔍 Search &amp; filters</h4><p>The search box filters all 84 checks live across every zone. Tap a risk pill (Critical / High / Medium / Low) to filter by risk level; tap again to clear.</p><h4>🎨 Personalise</h4><p>Pick a colour theme and light or dark mode - remembered on this device. Make the cheat sheet yours: add your own emergency numbers and notes.</p><h4>💾 Save &amp; 🖨️ Print</h4><p>Progress saves automatically on this device as you go. To move your progress to another device or keep a backup, tap 💾 Save - this downloads a small file. On the new device (or after clearing your browser), open the same checklist, tap 📂 Load, and choose that file to restore your progress exactly where you left off. Keep the file somewhere safe, like your email or a notes app. Print the full checklist, one zone, or your personalised cheat sheet - all checks expand automatically when printing. Choose "Save as PDF" in the print dialog to create a PDF.</p>'}
 };
 
 // ═══════════════════════════════════════════
-// TRADEMARK ICON SET — same outline family as the whole collection
+// TRADEMARK ICON SET - same outline family as the whole collection
 // ═══════════════════════════════════════════
 const _svg = inner => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">' + inner + '</svg>';
 const ICONS = {
@@ -478,7 +496,7 @@ function injectIcons(){
   document.querySelectorAll('.zic[data-zi]').forEach(el=>{ el.innerHTML = ICONS[el.dataset.zi] || ''; });
 }
 // ═══════════════════════════════════════════
-// ALL 84 CHECKS — PRE-SCHOOLER (3–6 YEARS)
+// ALL 84 CHECKS - PRE-SCHOOLER (3–6 YEARS)
 // ═══════════════════════════════════════════
 const ZONES = [
   {
@@ -489,11 +507,11 @@ const ZONES = [
         who:'Parents of 3–6 year olds sleeping in their own bed and room',
         what:'A bedroom that hasn\'t been re-assessed for a taller, more capable child who now climbs furniture, opens drawers and explores at height',
         where:'Child\'s bedroom',
-        why:'By ages 3–6 children can climb higher, open more, and are often first awake — hazards missed at toddler height, like the top of a wardrobe or a high shelf, are now within reach.',
+        why:'By ages 3–6 children can climb higher, open more, and are often first awake - hazards missed at toddler height, like the top of a wardrobe or a high shelf, are now within reach.',
         how:'Repeat a hazard sweep from a standing 110cm(43in) child\'s-eye height: remove anything climbable near windows, secure loose rugs, keep small or sharp items off low shelves, and check nothing heavy can be pulled down.',
         measurement:'Re-sweep at each growth spurt; assume reach increases by roughly 15cm(6in) every 6 months at this age.',
         example:'A 4-year-old drags a toy box under a shelf to reach a keepsake box containing sewing pins.',
-        tip:'Do the sweep from your knees, not standing — see the room the way a climbing 4-year-old actually sees it.' },
+        tip:'Do the sweep from your knees, not standing - see the room the way a climbing 4-year-old actually sees it.' },
 
       { id:'p02', num:'P02', risk:'critical', title:'Furniture Anchoring Re-Check',
         who:'All parents and caregivers of pre-schoolers',
@@ -503,7 +521,7 @@ const ZONES = [
         how:'Anchor every freestanding tall unit and TV with wall straps or brackets rated for the item\'s weight; keep TVs on low, stable furniture rather than tall chests; empty tall drawer units of anything worth climbing for.',
         measurement:'Anti-tip brackets rated to at least the unit\'s full loaded weight; re-inspect anchors twice a year.',
         example:'A 5-year-old climbs open drawers like stairs to reach a top shelf; the unit was anchored a year earlier and holds firm.',
-        tip:'Pull-test every anchored item once a season — a loose strap is worse than none, because it creates false confidence.' },
+        tip:'Pull-test every anchored item once a season - a loose strap is worse than none, because it creates false confidence.' },
 
       { id:'p03', num:'P03', risk:'critical', title:'Window & Balcony Safety',
         who:'Parents in homes with upper floors or balconies',
@@ -513,17 +531,17 @@ const ZONES = [
         how:'Keep restrictors limiting opening to 100mm(4in) on upper-floor windows; keep furniture away from windows and balcony doors; fit balcony railings with vertical bars no more than 89mm(3.5in) apart and nothing horizontal to climb.',
         measurement:'Maximum window opening 100mm(4in); balcony gaps ≤89mm(3.5in); balcony height ≥1.1m(43in).',
         example:'A 4-year-old pushes a stool to a balcony door to see a bird, unlatches a child lock a sibling left undone, and leans on the rail.',
-        tip:'Treat every balcony door lock the same as a medicine cabinet — check it\'s engaged, every single day.' },
+        tip:'Treat every balcony door lock the same as a medicine cabinet - check it\'s engaged, every single day.' },
 
       { id:'p04', num:'P04', risk:'critical', title:'Button Batteries & Magnets in Toys',
         who:'Parents of pre-schoolers with battery-powered or magnetic toys',
         what:'Button batteries or small high-powered magnets from toys, remotes, key fobs or novelty items left accessible',
         where:'Toy boxes, living room, anywhere with remotes or battery gadgets',
-        why:'A swallowed button battery can burn through tissue within two hours; two or more swallowed magnets can pinch together across the bowel wall causing life-threatening injury — pre-schoolers are old enough to open some compartments toddlers couldn\'t.',
-        how:'Buy toys meeting EN 71 / ISO 8124 toy safety standards with screw-secured battery compartments; store spare batteries and magnetic toys locked away; if a swallow is suspected, go to emergency care immediately — do not wait for symptoms.',
+        why:'A swallowed button battery can burn through tissue within two hours; two or more swallowed magnets can pinch together across the bowel wall causing life-threatening injury - pre-schoolers are old enough to open some compartments toddlers couldn\'t.',
+        how:'Buy toys meeting EN 71 / ISO 8124 toy safety standards with screw-secured battery compartments; store spare batteries and magnetic toys locked away; if a swallow is suspected, go to emergency care immediately - do not wait for symptoms.',
         measurement:'EN 71-1 / ISO 8124 compliant battery compartments; button-battery ingestion is a same-day emergency.',
         example:'A 3-year-old prises open a remote control\'s battery cover that a toddler couldn\'t manage and puts the battery in his mouth.',
-        tip:'If you wouldn\'t want your child to swallow it, it shouldn\'t be openable without a screwdriver — check every gadget in the house, not just toys.' },
+        tip:'If you wouldn\'t want your child to swallow it, it shouldn\'t be openable without a screwdriver - check every gadget in the house, not just toys.' },
 
       { id:'p05', num:'P05', risk:'critical', title:'Medicine & Vitamin Storage',
         who:'Parents storing medicines, vitamins and supplements at home',
@@ -531,11 +549,11 @@ const ZONES = [
         where:'Kitchen cupboards, bathroom cabinets, handbags, bedside tables',
         why:'Pre-schoolers can now open child-resistant caps with persistence, climb to reach cupboards, and are drawn to colourful chewable vitamins that look and taste like sweets.',
         how:'Store all medicines and vitamins in a locked cabinet or high, out-of-sight location, in original child-resistant packaging (ISO 8317); never call medicine "sweets"; keep visitors\' and grandparents\' bags off the floor when they contain medication.',
-        measurement:'ISO 8317 child-resistant packaging; storage height inaccessible even with a climbed stool — assume reach to 1.4m(55in).',
+        measurement:'ISO 8317 child-resistant packaging; storage height inaccessible even with a climbed stool - assume reach to 1.4m(55in).',
         example:'A 4-year-old finds a bag left on the floor and shares "sweets" (iron tablets) with a younger sibling.',
         tip:'Ask every visitor to hang bags on a hook, not leave them on the floor or a low chair.' },
 
-      { id:'p06', num:'P06', risk:'high', title:'Fire Escape Plan — Child Can Participate',
+      { id:'p06', num:'P06', risk:'high', title:'Fire Escape Plan - Child Can Participate',
         who:'All families with a pre-schooler',
         what:'No practised fire escape plan the child understands, or a smoke alarm the family hasn\'t tested recently',
         where:'Whole home',
@@ -543,17 +561,17 @@ const ZONES = [
         how:'Test smoke alarms monthly; agree a simple two-exit plan and an outside meeting point; practise a calm walk-through twice a year, including "stop, drop and roll" if clothing catches fire, without frightening drills.',
         measurement:'Smoke alarm tested monthly; escape plan rehearsed at least twice a year; alarms on every level and outside sleeping areas.',
         example:'A family holds a relaxed "fire drill game" after dinner; when a real alarm sounds weeks later, the pre-schooler heads straight to the meeting point without panic.',
-        tip:'Frame it as a game with a reward at the meeting point, not a scary drill — calm rehearsal beats a frightening lecture.' },
+        tip:'Frame it as a game with a reward at the meeting point, not a scary drill - calm rehearsal beats a frightening lecture.' },
 
       { id:'p07', num:'P07', risk:'high', title:'Hot Surfaces Now Within Reach',
         who:'Parents of pre-schoolers who can now reach higher surfaces',
         what:'Radiators, hair straighteners, irons, hobs and hot ovens now reachable by a taller, climbing child',
         where:'Bedroom (radiators), bathroom (styling tools), kitchen',
         why:'A pre-schooler\'s increased height and climbing ability puts surfaces that were toddler-safe within contact range; skin burns more easily and more deeply than adult skin at the same temperature.',
-        how:'Fit radiator covers or guards where radiators run hot; never leave straighteners or irons cooling within reach — they stay hot for many minutes after switching off; keep oven and hob controls turned to the back and use back rings where possible.',
+        how:'Fit radiator covers or guards where radiators run hot; never leave straighteners or irons cooling within reach - they stay hot for many minutes after switching off; keep oven and hob controls turned to the back and use back rings where possible.',
         measurement:'Styling tools/irons can exceed 150°C(300°F) and stay hot for 10+ minutes after use; child skin burns at lower temperatures and shorter contact times than adult skin.',
         example:'A styling tool is left cooling on a bathroom shelf; a 5-year-old touches it to "help tidy up" and sustains a contact burn.',
-        tip:'Unplug hot tools and put them straight into a heatproof pouch out of reach — "cooling on the side" is exactly the window a curious child exploits.' },
+        tip:'Unplug hot tools and put them straight into a heatproof pouch out of reach - "cooling on the side" is exactly the window a curious child exploits.' },
 
       { id:'p08', num:'P08', risk:'medium', title:'Night Routine, Nightlights & Sleep Environment',
         who:'Parents managing a pre-schooler\'s sleep',
@@ -563,7 +581,7 @@ const ZONES = [
         how:'Keep a consistent, calm bedtime routine; use a dim nightlight rather than a fully lit room; keep the room around 16–20°C(61–68°F); reassure fears without reinforcing them by leaving lights fully on all night.',
         measurement:'Recommended sleep 10–13 hours/24hrs including naps for ages 3–5 (WHO); room temperature 16–20°C(61–68°F).',
         example:'A 4-year-old scared of the dark is given a soft nightlight and a "brave toy" instead of the main light left blazing all night, and settles within a week.',
-        tip:'A consistent wind-down routine solves more night fears than any nightlight — predictability is the real reassurance.' },
+        tip:'A consistent wind-down routine solves more night fears than any nightlight - predictability is the real reassurance.' },
 
       { id:'p09', num:'P09', risk:'medium', title:'Toy Storage & Trip Hazards',
         who:'Parents with pre-schoolers who have more toys and more activity',
@@ -573,7 +591,7 @@ const ZONES = [
         how:'Keep floors and stairs clear with a "toys off the stairs" house rule; use storage boxes with soft-close or lid-free/open designs; do a nightly five-minute floor clear before bed.',
         measurement:'Zero tolerance for toys on stair treads; soft-close hinges rated to prevent finger entrapment.',
         example:'A parent trips over a ride-on toy left at the bottom of the stairs while carrying a younger sibling in the dark.',
-        tip:'Make the nightly toy sweep part of the bedtime routine — the child helps, and the house resets every day.' },
+        tip:'Make the nightly toy sweep part of the bedtime routine - the child helps, and the house resets every day.' },
 
       { id:'p10', num:'P10', risk:'medium', title:'Sharp Furniture Corners & Edges',
         who:'Parents of active, running pre-schoolers',
@@ -583,9 +601,9 @@ const ZONES = [
         how:'Fit corner guards on glass tables and sharp-edged furniture in main play areas; keep a clear running path free of low glass tables where possible; teach "walking feet indoors" as a house rule, while redirecting running energy outdoors.',
         measurement:'Corner guards fitted on any edge below 110cm(43in) in main play/running areas.',
         example:'A 4-year-old chasing a sibling around the coffee table catches a temple on a sharp glass corner.',
-        tip:'If a room has become a racetrack, redirect the running outside rather than only guarding corners — both together work best.' },
+        tip:'If a room has become a racetrack, redirect the running outside rather than only guarding corners - both together work best.' },
 
-      { id:'p11', num:'P11', risk:'medium', title:'Door Safety — Finger Trapping & Slamming',
+      { id:'p11', num:'P11', risk:'medium', title:'Door Safety - Finger Trapping & Slamming',
         who:'Parents of pre-schoolers who now open and slam doors themselves',
         what:'Fingers trapped in door hinges or a door slammed by wind or another child',
         where:'Every internal and external door',
@@ -593,7 +611,7 @@ const ZONES = [
         how:'Fit foam hinge guards or finger-safe strips on frequently used doors; fit door closers or stoppers to prevent wind-slam; teach the child to hold the handle, not the edge, when closing a door.',
         measurement:'Hinge guards fitted on doors used daily by the child; door stoppers on external and draught-prone doors.',
         example:'A sibling slams a bedroom door in a game of chase while the younger child\'s fingers are still in the frame.',
-        tip:'The hinge side is more dangerous than the handle side — guard the gap, not just teach "gentle hands."' },
+        tip:'The hinge side is more dangerous than the handle side - guard the gap, not just teach "gentle hands."' },
 
       { id:'p12', num:'P12', risk:'high', title:'Blind & Curtain Cord Safety Re-Check',
         who:'All parents with corded blinds or curtains',
@@ -613,7 +631,7 @@ const ZONES = [
         how:'Use socket covers or tamper-resistant sockets where fitted, route cords away from play areas, unplug small appliances (kettles, toasters, hair tools) when not in use, and teach "we don\'t touch plugs" as a firm rule reinforced calmly and consistently.',
         measurement:'Tamper-resistant sockets or covers on all accessible outlets; appliance cords kept out of pull-reach of a standing child.',
         example:'A 3-year-old pulls a kettle cord dangling over a worktop edge, tipping hot water toward himself.',
-        tip:'Cords that hang over an edge are an invitation — route them along the back of worktops, always.' },
+        tip:'Cords that hang over an edge are an invitation - route them along the back of worktops, always.' },
 
       { id:'p14', num:'P14', risk:'low', title:'Household Emergency Information Accessible',
         who:'Parents and any regular caregiver (grandparent, babysitter, nursery)',
@@ -623,22 +641,22 @@ const ZONES = [
         how:'Keep a simple written or printed summary of allergies, regular medications, emergency contacts and the fire escape plan somewhere visible for any caregiver; complete this checklist\'s built-in cheat sheet and keep it updated.',
         measurement:'Emergency information visible within 10 seconds of a caregiver looking for it.',
         example:'A babysitter doesn\'t know which cupboard holds the asthma inhaler until she finds the fridge-door emergency card.',
-        tip:'Fill in the cheat sheet in this checklist today — it takes five minutes and it\'s the first thing any carer should see.' }
+        tip:'Fill in the cheat sheet in this checklist today - it takes five minutes and it\'s the first thing any carer should see.' }
     ]
   },
   {
     id: 2, name: 'Kitchen, Mealtime & Allergies', icon: '🍽️',
     desc: '14 checks covering choking on harder foods, kitchen involvement, knives, hot drinks, allergy management and packed-lunch safety.',
     checks: [
-      { id:'p15', num:'P15', risk:'critical', title:'Choking — Eating While Moving or Playing',
+      { id:'p15', num:'P15', risk:'critical', title:'Choking - Eating While Moving or Playing',
         who:'Parents and caregivers feeding pre-schoolers',
         what:'A child eating while running, playing, lying down or distracted by a screen',
-        where:'Anywhere food is eaten — not just the table',
-        why:'Choking risk in this age group is driven less by "mouthing" objects and more by eating while distracted or in motion — a piece of food in the airway during a fall or laugh can lodge quickly.',
+        where:'Anywhere food is eaten - not just the table',
+        why:'Choking risk in this age group is driven less by "mouthing" objects and more by eating while distracted or in motion - a piece of food in the airway during a fall or laugh can lodge quickly.',
         how:'Insist food is eaten sitting down at a table or chair, not while walking, running or lying on the sofa; turn screens off during meals and snacks; supervise snacks the same as meals.',
         measurement:'100% of eating done seated; ILCOR first aid for choking: 5 back blows + 5 abdominal thrusts, alternating, for ages 1 and up.',
         example:'A 4-year-old laughs with a mouthful of popcorn while running to answer the door and chokes.',
-        tip:'"Sit to eat, stand to play" — say it every time until it\'s automatic, for snacks as much as meals.' },
+        tip:'"Sit to eat, stand to play" - say it every time until it\'s automatic, for snacks as much as meals.' },
 
       { id:'p16', num:'P16', risk:'critical', title:'Hard, Round & High-Risk Foods',
         who:'Parents preparing food for 3–6 year olds',
@@ -648,9 +666,9 @@ const ZONES = [
         how:'Continue quartering grapes and cherry tomatoes lengthwise until at least age 5; avoid whole nuts and hard sweets under age 5; cook hard vegetables (carrot, apple) until softer or grate/slice thinly.',
         measurement:'Round foods quartered lengthwise until age 5; whole nuts and hard sweets avoided under age 5.',
         example:'A well-meaning relative offers whole grapes as a "healthy snack" without realising the quartering rule still applies at 4 years old.',
-        tip:'If it\'s round and fits inside a toilet-roll tube (≈32mm/1.25in), cut it — the rule doesn\'t disappear at the end of the toddler years.' },
+        tip:'If it\'s round and fits inside a toilet-roll tube (≈32mm/1.25in), cut it - the rule doesn\'t disappear at the end of the toddler years.' },
 
-      { id:'p17', num:'P17', risk:'high', title:'Kitchen Involvement — Supervised Cooking',
+      { id:'p17', num:'P17', risk:'high', title:'Kitchen Involvement - Supervised Cooking',
         who:'Parents including pre-schoolers in cooking activities',
         what:'Burns from hobs, ovens, hot pans and boiling water during "helping in the kitchen"',
         where:'Kitchen, hob and oven area',
@@ -658,7 +676,7 @@ const ZONES = [
         how:'Turn pan handles inward and use back rings when a child is in the kitchen; give age-appropriate, supervised tasks away from direct heat (stirring cold ingredients, washing vegetables); keep a "cooker zone" the child knows not to enter without an adult\'s hand-in-hand invitation.',
         measurement:'No unsupervised child within 1m(3ft) of an active hob or open oven door.',
         example:'A 5-year-old reaches to "help stir" a pot on the front ring and knocks the handle, spilling hot liquid.',
-        tip:'Mark a visible "cooker zone" boundary on the floor — it turns an abstract rule into something a young child can see and follow.' },
+        tip:'Mark a visible "cooker zone" boundary on the floor - it turns an abstract rule into something a young child can see and follow.' },
 
       { id:'p18', num:'P18', risk:'high', title:'Sharp Knives & Cutlery Introduction',
         who:'Parents teaching early food-prep skills',
@@ -668,7 +686,7 @@ const ZONES = [
         how:'Store adult knives out of reach or in a locked block; introduce blunt-tipped, serrated children\'s knives for supervised soft-food cutting (banana, cooked pasta) from around age 4–5; always supervise directly during use.',
         measurement:'Children\'s knives only, always supervised, from approximately age 4+; adult knives stored above 1.4m(55in) reach or locked.',
         example:'A 4-year-old is given a child-safe knife to cut a banana under direct supervision and takes pride in "cooking like the grown-ups."',
-        tip:'A blunt-tipped knife under supervision teaches more real skill than a sharp one taken away in a panic — controlled practice beats prohibition.' },
+        tip:'A blunt-tipped knife under supervision teaches more real skill than a sharp one taken away in a panic - controlled practice beats prohibition.' },
 
       { id:'p19', num:'P19', risk:'high', title:'Hot Drinks & Food Carried by a Confident Walker',
         who:'Parents and anyone carrying hot drinks or food near a pre-schooler',
@@ -678,7 +696,7 @@ const ZONES = [
         how:'Keep hot drinks and dishes away from table edges and out of a child\'s dash zone; use travel mugs with lids where possible; establish a "kitchen stays calm" rule when hot food is being carried.',
         measurement:'Hot drinks scald-capable for 15–20 minutes after pouring; keep at least 50cm(20in) from any table edge.',
         example:'A 5-year-old sprints through the kitchen chasing a ball just as a parent turns with a mug of tea, causing a spill scald.',
-        tip:'If you\'re carrying something hot, say "hot, stand back" out loud — the verbal cue buys the second a fast child needs to stop.' },
+        tip:'If you\'re carrying something hot, say "hot, stand back" out loud - the verbal cue buys the second a fast child needs to stop.' },
 
       { id:'p20', num:'P20', risk:'critical', title:'Allergy Management at Home & at Nursery/School',
         who:'Parents of a child with a diagnosed food or environmental allergy',
@@ -688,7 +706,7 @@ const ZONES = [
         how:'Provide a written allergy action plan to nursery/school with clear symptoms and steps; ensure any prescribed emergency medication (such as an adrenaline auto-injector) is in date, accessible, and staff are trained to use it; teach the child from age 3–4 to say "I can\'t eat that, I\'m allergic."',
         measurement:'Allergy action plan reviewed at least annually or after any reaction; emergency medication checked for expiry monthly.',
         example:'A child with a nut allergy attends a birthday party where the host wasn\'t told, and cross-contact triggers a reaction.',
-        tip:'Send a written allergy card to every new setting — nursery, party host, grandparent — don\'t rely on a verbal mention just once.' },
+        tip:'Send a written allergy card to every new setting - nursery, party host, grandparent - don\'t rely on a verbal mention just once.' },
 
       { id:'p21', num:'P21', risk:'medium', title:'Hydration & Sugary Drinks',
         who:'Parents managing daily drinks for a pre-schooler',
@@ -698,7 +716,7 @@ const ZONES = [
         how:'Offer water or plain milk as the main drinks between meals; limit fruit juice to mealtimes only and dilute it; avoid a bottle or beaker of juice "on tap" throughout the day.',
         measurement:'Fruit juice limited to ≤125ml(4fl oz), diluted, at mealtimes only (WHO/NICE guidance); water freely available between meals.',
         example:'A toddler-style "sippy cup of juice" habit continues unchanged into the pre-school years and contributes to early cavities found at a dental check.',
-        tip:'Swap the all-day juice cup for a water bottle — save juice as a mealtime-only extra, not a between-meals default.' },
+        tip:'Swap the all-day juice cup for a water bottle - save juice as a mealtime-only extra, not a between-meals default.' },
 
       { id:'p22', num:'P22', risk:'medium', title:'Food Hygiene & Handwashing Routine',
         who:'Parents establishing hygiene habits',
@@ -718,7 +736,7 @@ const ZONES = [
         how:'Store all cleaning chemicals and detergent pods in a locked or high cupboard, in original containers; never decant chemicals into food or drink containers; keep the poisons information service number saved in your cheat sheet.',
         measurement:'Chemical storage above 1.4m(55in) or locked; original labelled containers only.',
         example:'A 3-year-old finds a dishwasher pod that rolled out during loading and bites into it before an adult notices.',
-        tip:'If it\'s in a cupboard a pre-schooler can now reach and open, it needs a lock — not just distance.' },
+        tip:'If it\'s in a cupboard a pre-schooler can now reach and open, it needs a lock - not just distance.' },
 
       { id:'p24', num:'P24', risk:'high', title:'Choking on Small Toys, Coins & Magnets at Snack Time',
         who:'Parents supervising snack and play areas',
@@ -728,7 +746,7 @@ const ZONES = [
         how:'Keep small-part toys (under approximately 32mm/1.25in) separate from snack areas; do a floor check for dropped coins, magnets or batteries before free play; keep snack time and small-toy play time separated for younger pre-schoolers.',
         measurement:'Small-part test: anything that fits inside a toilet-roll tube (≈32mm/1.25in diameter) is a choking hazard under age 5.',
         example:'A 3-year-old plays with a sibling\'s small magnetic building set while snacking on crackers on the same rug.',
-        tip:'"Snack table, toy floor" — a simple spatial rule keeps small parts and food from ever mixing.' },
+        tip:'"Snack table, toy floor" - a simple spatial rule keeps small parts and food from ever mixing.' },
 
       { id:'p25', num:'P25', risk:'medium', title:'Mealtime Behaviour & Seating',
         who:'Parents establishing mealtime habits',
@@ -738,7 +756,7 @@ const ZONES = [
         how:'Use a stable chair or booster at the correct table height; establish "we sit to eat" as a consistent, calmly enforced rule; avoid mobile snacking (walking around the house with food) as a default habit.',
         measurement:'Seated, upright posture required for all meals and snacks; table/chair height allowing feet support or a footrest.',
         example:'A child who "grazes" while running between rooms trips with a mouthful of biscuit.',
-        tip:'A consistent seat for meals — even a favourite chair — builds the sit-to-eat habit faster than repeated verbal reminders.' },
+        tip:'A consistent seat for meals - even a favourite chair - builds the sit-to-eat habit faster than repeated verbal reminders.' },
 
       { id:'p26', num:'P26', risk:'low', title:'Nutrition, Portions & Picky Eating',
         who:'Parents managing a pre-schooler\'s diet',
@@ -748,7 +766,7 @@ const ZONES = [
         how:'Offer a variety of foods across the week rather than forcing single meals; use age-appropriate portion sizes (roughly the child\'s own fist-sized portions); avoid using food as a reward or punishment; seek advice if growth, weight or eating causes ongoing concern.',
         measurement:'Portion guide: roughly palm/fist-sized servings per food group; growth checked against standard growth charts at routine health checks.',
         example:'A parent battles nightly over vegetables; switching to "offer without pressure" over several weeks reduces mealtime stress.',
-        tip:'Repeated calm exposure — offering a food many times without pressure — works better than any single forced meal.' },
+        tip:'Repeated calm exposure - offering a food many times without pressure - works better than any single forced meal.' },
 
       { id:'p27', num:'P27', risk:'medium', title:'Oven, Dishwasher & Appliance Door Safety',
         who:'Parents with pre-schoolers moving confidently around kitchen appliances',
@@ -756,7 +774,7 @@ const ZONES = [
         where:'Kitchen',
         why:'Oven doors radiate significant heat even when closed and can cause contact burns; an open dishwasher door is both a trip hazard and a place a child can grab a knife handle or contact detergent residue.',
         how:'Use an oven door guard where the door radiates heat; close dishwasher doors immediately after loading or unloading and load knives point-down and out of reach; never let appliance doors be used as a step or seat.',
-        measurement:'Oven door surface can exceed 60°C(140°F) during use — sufficient for a contact burn within seconds.',
+        measurement:'Oven door surface can exceed 60°C(140°F) during use - sufficient for a contact burn within seconds.',
         example:'A 4-year-old leans against a hot oven door while "helping" and receives a hand burn.',
         tip:'A door guard is a five-minute fix that removes the temptation to touch a hot glass door entirely.' },
 
@@ -768,52 +786,52 @@ const ZONES = [
         how:'Continue cutting round or hard foods appropriately even in packed lunches; use an insulated bag with an ice pack for perishables; clearly label any allergen-free items if the setting has other children with allergies; avoid sending whole nuts or hard sweets per nursery/school policy.',
         measurement:'Perishable food safe for a maximum of 4 hours without refrigeration, less in warm conditions; round foods still quartered.',
         example:'A parent sends whole grapes in a lunchbox, unaware the rule doesn\'t relax just because a teacher is now supervising instead of a parent.',
-        tip:'Apply every home food-safety rule to the lunch box too — supervision changes, the child\'s airway doesn\'t.' }
+        tip:'Apply every home food-safety rule to the lunch box too - supervision changes, the child\'s airway doesn\'t.' }
     ]
   },
   {
     id: 3, name: 'Bathroom, Water & Pool Safety', icon: '🛁',
     desc: '14 checks covering bath supervision, pool fencing, open water, swimming competence, scalds and medicine cabinets.',
     checks: [
-      { id:'p29', num:'P29', risk:'high', title:'Bath Supervision — Still Required',
+      { id:'p29', num:'P29', risk:'high', title:'Bath Supervision - Still Required',
         who:'Parents of pre-schoolers who can now sit, stand and often "swim" a little in the bath',
         what:'A false sense of security leading to reduced supervision because the child seems capable in the bath',
         where:'Bathroom, bath time',
-        why:'Increased competence in water does not remove drowning risk — a pre-schooler can still slip, submerge or panic, and drowning is silent; supervision must remain within arm\'s reach for non-swimmers.',
+        why:'Increased competence in water does not remove drowning risk - a pre-schooler can still slip, submerge or panic, and drowning is silent; supervision must remain within arm\'s reach for non-swimmers.',
         how:'Stay within arm\'s reach for the whole bath for children who are not confident, independent swimmers; never leave to answer a phone or door, even "for a second"; empty the bath immediately after use.',
         measurement:'Arm\'s-reach supervision maintained for 100% of bath time until confirmed independent swimming competence; bath water 37–38°C(98.6–100.4°F).',
         example:'A parent steps out "for 30 seconds" to grab a towel while a 4-year-old is playing in the bath, and the child slips under.',
-        tip:'Bring everything you need into the bathroom before bath time starts — towel, pyjamas, cream — so there\'s no reason to leave.' },
+        tip:'Bring everything you need into the bathroom before bath time starts - towel, pyjamas, cream - so there\'s no reason to leave.' },
 
       { id:'p30', num:'P30', risk:'critical', title:'Pool & Spa Isolation Fencing',
         who:'Families with home pools, spas or access to a neighbour\'s pool',
         what:'A swimming pool or spa without full isolation fencing and a self-closing, self-latching gate',
         where:'Garden pool, spa or hot tub area',
-        why:'Drowning is a leading cause of death in this age group worldwide; a properly isolated pool — fenced separately from the house, not just the garden boundary — is one of the most effective single interventions, alongside supervision.',
+        why:'Drowning is a leading cause of death in this age group worldwide; a properly isolated pool - fenced separately from the house, not just the garden boundary - is one of the most effective single interventions, alongside supervision.',
         how:'Fence the pool or spa completely separately from the house and garden with a fence at least 1.2m(4ft) high, gaps no more than 100mm(4in), and a self-closing, self-latching gate the child cannot operate; never rely on supervision alone as a substitute for isolation fencing.',
         measurement:'Fence height ≥1.2m(4ft); gaps ≤100mm(4in); self-closing, self-latching gate; drowning can occur in under 60 seconds and is silent.',
         example:'A gate left propped open "just while we carry the shopping in" allows a 3-year-old direct access to the pool unseen.',
-        tip:'A pool fence only works closed and latched — check the gate every single time you or anyone else passes through it.' },
+        tip:'A pool fence only works closed and latched - check the gate every single time you or anyone else passes through it.' },
 
-      { id:'p31', num:'P31', risk:'critical', title:'Open Water Hazards — Ponds, Buckets & Trips',
+      { id:'p31', num:'P31', risk:'critical', title:'Open Water Hazards - Ponds, Buckets & Trips',
         who:'Families with garden water features, or visiting open water on trips',
         what:'Garden ponds, water butts, buckets, paddling pools and open water encountered on outings such as lakes, canals or rivers',
         where:'Garden, and any location visited with open water',
         why:'A pre-schooler can drown in a small amount of water within seconds; increased mobility and independence on outings means new open-water exposure that toddlers rarely faced.',
-        how:'Fence or cover garden ponds and water butts; empty buckets and paddling pools immediately after use; on outings near open water, maintain constant, uninterrupted, within-touch supervision — assign one adult with no other job.',
+        how:'Fence or cover garden ponds and water butts; empty buckets and paddling pools immediately after use; on outings near open water, maintain constant, uninterrupted, within-touch supervision - assign one adult with no other job.',
         measurement:'Drowning risk from as little as 2.5cm(1in) of water; assign a dedicated "water watcher" adult with no phone and no other task on every outing near open water.',
         example:'At a family picnic near a river, several adults assume "someone else is watching" and a 4-year-old wanders to the water\'s edge.',
-        tip:'Say out loud who the water watcher is for the next 15 minutes, then swap — an unnamed responsibility is nobody\'s responsibility.' },
+        tip:'Say out loud who the water watcher is for the next 15 minutes, then swap - an unnamed responsibility is nobody\'s responsibility.' },
 
       { id:'p32', num:'P32', risk:'high', title:'Swimming Competence & Approved Flotation Aids',
         who:'Parents introducing or continuing swimming lessons',
         what:'Reliance on inflatable armbands or floats as a substitute for supervision, or delayed introduction to formal swimming instruction',
         where:'Swimming pools, lessons, open water',
         why:'Formal, age-appropriate swimming lessons build real water competence and confidence over years, not weeks; inflatable toys and armbands can slip or deflate and are not safety equipment.',
-        how:'Enrol in age-appropriate swimming lessons where available; use only approved, well-fitted flotation aids — not inflatable armbands — as a supplement to, never a replacement for, direct supervision; continue lessons consistently through this age range.',
+        how:'Enrol in age-appropriate swimming lessons where available; use only approved, well-fitted flotation aids - not inflatable armbands - as a supplement to, never a replacement for, direct supervision; continue lessons consistently through this age range.',
         measurement:'Swimming lessons recommended to begin from around age 4, continued regularly through age 6+; approved flotation aids fitted per manufacturer sizing, always supervised.',
         example:'A parent relaxes supervision because a child is "wearing armbands," unaware one has begun to deflate.',
-        tip:'Armbands and floats are toys, not safety equipment — supervision is the only thing that actually prevents drowning.' },
+        tip:'Armbands and floats are toys, not safety equipment - supervision is the only thing that actually prevents drowning.' },
 
       { id:'p33', num:'P33', risk:'low', title:'Toilet Independence & Hygiene',
         who:'Parents supporting toilet training completion and independence',
@@ -833,7 +851,7 @@ const ZONES = [
         how:'Fit or maintain a thermostatic mixing valve (TMV) capping output at 46–50°C(115–122°F); run cold water first when a child is filling anything themselves; supervise independent handwashing until the habit and tap awareness are established.',
         measurement:'TMV output capped at 46–50°C(115–122°F); water at 60°C(140°F) can cause a full-thickness burn in under 5 seconds.',
         example:'A newly confident 4-year-old turns the hot tap fully on to "wash hands like a grown-up" without checking temperature first.',
-        tip:'A TMV protects even when supervision briefly lapses — fit one rather than relying only on reminders.' },
+        tip:'A TMV protects even when supervision briefly lapses - fit one rather than relying only on reminders.' },
 
       { id:'p35', num:'P35', risk:'critical', title:'Bathroom Medicine Cabinet Storage',
         who:'Parents storing medication in the bathroom',
@@ -843,7 +861,7 @@ const ZONES = [
         how:'Store all medicines in a locked cabinet or one fitted with a child safety catch; never leave medication on an open shelf or windowsill "just for now"; dispose of unused or expired medicines promptly and safely.',
         measurement:'ISO 8317 child-resistant packaging plus a locked cabinet as a second layer of protection.',
         example:'A child climbs onto the closed toilet lid to reach an unlocked cabinet containing painkillers.',
-        tip:'Two layers of protection — child-resistant packaging AND a locked cabinet — catch what one layer alone misses.' },
+        tip:'Two layers of protection - child-resistant packaging AND a locked cabinet - catch what one layer alone misses.' },
 
       { id:'p36', num:'P36', risk:'medium', title:'Slip Hazards in Bath & Shower',
         who:'Parents of increasingly independent bathers',
@@ -863,7 +881,7 @@ const ZONES = [
         how:'Apply broad-spectrum SPF 30+ sunscreen 15–20 minutes before going outside, reapply every 2 hours or after water play, and check the expiry date each season; make application part of the same routine as brushing teeth or getting dressed.',
         measurement:'SPF 30+ broad-spectrum, reapplied every 2 hours; sunscreen typically expires 12 months after opening.',
         example:'A half-used bottle of sunscreen from two summers ago has lost effectiveness and is applied without anyone checking the date.',
-        tip:'Keep sunscreen with the toothbrushes — pairing it with an existing daily habit makes it automatic.' },
+        tip:'Keep sunscreen with the toothbrushes - pairing it with an existing daily habit makes it automatic.' },
 
       { id:'p38', num:'P38', risk:'medium', title:'Hairdryer, Straightener & Appliance Cords',
         who:'Parents using styling tools near pre-schoolers',
@@ -873,7 +891,7 @@ const ZONES = [
         how:'Keep styling tools unplugged and stored in a heatproof pouch when not actively in use; never drape cords where a child can reach and pull; supervise closely if a child is in the room during use.',
         measurement:'Styling tools can remain above 100°C(212°F) for several minutes after switching off.',
         example:'A cord left hanging over a bathroom counter is grabbed by a 3-year-old reaching for a hairbrush, pulling a hot straightener toward them.',
-        tip:'Cool, then store — don\'t leave hot tools "resting" on a counter within a child\'s reach even briefly.' },
+        tip:'Cool, then store - don\'t leave hot tools "resting" on a counter within a child\'s reach even briefly.' },
 
       { id:'p39', num:'P39', risk:'low', title:'Toothbrushing & Dental Independence',
         who:'Parents supervising dental hygiene',
@@ -883,7 +901,7 @@ const ZONES = [
         how:'Use a pea-sized amount of toothpaste with at least 1000ppm fluoride, brush twice daily for two minutes, and supervise or finish brushing for the child even if they\'ve started independently; encourage independence in holding the brush while an adult ensures coverage.',
         measurement:'Pea-sized toothpaste amount, at least 1000ppm fluoride, twice daily, supervised until approximately age 7.',
         example:'A newly "independent" 4-year-old brushes for 10 seconds and misses the back teeth entirely without a parent finishing the job.',
-        tip:'Let them brush first for independence, then you finish the job — both halves matter for this age group.' },
+        tip:'Let them brush first for independence, then you finish the job - both halves matter for this age group.' },
 
       { id:'p40', num:'P40', risk:'low', title:'Bath Toy Hygiene',
         who:'Parents of pre-schoolers with bath toys',
@@ -895,7 +913,7 @@ const ZONES = [
         example:'A well-loved squirty toy hasn\'t been cleaned in months and releases visibly discoloured water when squeezed.',
         tip:'A basket that lets water drain and air circulate after bath time does most of the hygiene work automatically.' },
 
-      { id:'p41', num:'P41', risk:'medium', title:'Bathroom Door Locks — Child Locking Self In',
+      { id:'p41', num:'P41', risk:'medium', title:'Bathroom Door Locks - Child Locking Self In',
         who:'Parents whose pre-schooler can now operate door locks',
         what:'A child accidentally or deliberately locking themselves in the bathroom and being unable to get out',
         where:'Bathroom door',
@@ -903,7 +921,7 @@ const ZONES = [
         how:'Fit locks with an external emergency release (a simple tool or coin-turn mechanism) accessible from outside; keep the release tool in a known, easy-to-find spot; teach the child how the lock works calmly, not as a "never touch this" rule that increases curiosity.',
         measurement:'External emergency release fitted and tested to work in under 30 seconds.',
         example:'A 4-year-old locks the bathroom door while playing and cannot work out how to unlock it, becoming distressed.',
-        tip:'Test your own external release blind, without looking, at least once — you need to open it fast under stress, not calmly with time to think.' },
+        tip:'Test your own external release blind, without looking, at least once - you need to open it fast under stress, not calmly with time to think.' },
 
       { id:'p42', num:'P42', risk:'critical', title:'Non-Swimmer Supervision at Pools & Beaches',
         who:'Families visiting public pools, beaches or open water with a non-swimming or developing-swimmer pre-schooler',
@@ -913,7 +931,7 @@ const ZONES = [
         how:'Assign one adult as the dedicated "water watcher" with no phone and no other task, rotating regularly; stay within arm\'s reach of non-swimmers at all times; agree a clear head-count routine when moving between pool areas or leaving the water.',
         measurement:'Water watcher rotation every 15–20 minutes to maintain full attention; arm\'s-reach supervision for non-swimmers at all times.',
         example:'At a busy public pool, parents assume the lifeguard is watching their specific child while chatting, and a 4-year-old drifts into deeper water.',
-        tip:'Say the words "I am the water watcher now" out loud when you take over — it makes the responsibility real and handoffs deliberate.' }
+        tip:'Say the words "I am the water watcher now" out loud when you take over - it makes the responsibility real and handoffs deliberate.' }
     ]
   },
   {
@@ -928,9 +946,9 @@ const ZONES = [
         how:'Use the NSPCC PANTS framework (Privates are private; Always remember your body belongs to you; No means no; Talk about secrets that upset you; Speak up) in simple, calm, age-appropriate conversations, not as a one-off "big talk."',
         measurement:'PANTS conversation introduced from age 3–4, revisited regularly rather than taught once.',
         example:'A child taught the PANTS rules confidently tells a parent about an uncomfortable interaction with an older child, exactly as intended.',
-        tip:'Use the correct anatomical names for body parts — it removes confusion and shame, and helps children report concerns more clearly.' },
+        tip:'Use the correct anatomical names for body parts - it removes confusion and shame, and helps children report concerns more clearly.' },
 
-      { id:'p44', num:'P44', risk:'high', title:'Stranger Awareness — Safe Adults, Not Fear',
+      { id:'p44', num:'P44', risk:'high', title:'Stranger Awareness - Safe Adults, Not Fear',
         who:'Parents teaching community safety',
         what:'Either no stranger-safety teaching, or fear-based teaching that makes children distrust all unfamiliar adults, including helpers in an emergency',
         where:'Public places, outings',
@@ -944,11 +962,11 @@ const ZONES = [
         who:'Parents and extended family',
         what:'A child pressured to hug or kiss relatives against their wishes',
         where:'Family gatherings, greetings and goodbyes',
-        why:'Teaching that a child\'s "no" to physical affection is respected — even with grandparents — reinforces the PANTS message that their body belongs to them, which is protective against later abuse.',
+        why:'Teaching that a child\'s "no" to physical affection is respected - even with grandparents - reinforces the PANTS message that their body belongs to them, which is protective against later abuse.',
         how:'Offer a choice of greeting (hug, high-five, wave) rather than insisting on physical affection; support the child\'s choice in front of relatives, even if it causes momentary awkwardness; explain the reasoning to family members in advance.',
         measurement:'Child offered a minimum of two greeting options at every family interaction; "no" respected without punishment or shaming.',
         example:'A relative insists on a hug goodbye despite the child pulling away; the parent steps in and offers a high-five alternative instead.',
-        tip:'A consistent "hug, high-five or wave — your choice" script removes the awkwardness for everyone and protects the underlying principle.' },
+        tip:'A consistent "hug, high-five or wave - your choice" script removes the awkwardness for everyone and protects the underlying principle.' },
 
       { id:'p46', num:'P46', risk:'medium', title:'Tantrums & Positive Discipline',
         who:'Parents managing typical pre-school emotional development',
@@ -958,7 +976,7 @@ const ZONES = [
         how:'Use consistent, calm, positive discipline: clear boundaries, natural consequences, and co-regulation (staying calm yourself while naming the child\'s feeling); avoid physical punishment and shouting matches; seek support if tantrums are frequent, prolonged or involve harm to self or others.',
         measurement:'NICE and WHO guidance both support positive, non-physical discipline approaches for this age group.',
         example:'A supermarket meltdown is met with a calm, low "I can see you\'re really frustrated" instead of an escalating shouting match.',
-        tip:'Your calm is contagious faster than your child\'s chaos — regulate yourself first, every time, before addressing the behaviour.' },
+        tip:'Your calm is contagious faster than your child\'s chaos - regulate yourself first, every time, before addressing the behaviour.' },
 
       { id:'p47', num:'P47', risk:'medium', title:'Screen Time Limits',
         who:'Parents managing tablets, phones and television use',
@@ -968,7 +986,7 @@ const ZONES = [
         how:'Limit recreational screen time to a maximum of 1 hour per day for ages 3–6 (WHO); avoid screens within an hour of bedtime; prioritise active, social and outdoor play over screen use; co-view content where possible rather than using screens as an unsupervised babysitter.',
         measurement:'≤1 hour/day recreational screen time, ages 3–6 (WHO); no screens in the hour before bed.',
         example:'A tablet used as a mealtime distraction becomes a daily two-hour habit that displaces outdoor play time.',
-        tip:'Set a visible timer the child can see counting down — it turns "screen time is over" from a surprise into an expected transition.' },
+        tip:'Set a visible timer the child can see counting down - it turns "screen time is over" from a surprise into an expected transition.' },
 
       { id:'p48', num:'P48', risk:'high', title:'Online & Device Safety Basics',
         who:'Parents introducing tablets, apps and video calls',
@@ -978,17 +996,17 @@ const ZONES = [
         how:'Use parental controls and age-appropriate profiles on all devices; keep device use in shared family spaces, not bedrooms; only allow video calls with known family/friends, always with an adult present or nearby; disable in-app purchases.',
         measurement:'Parental controls active on 100% of devices used by the child; device use supervised or in a shared space.',
         example:'A child navigates past a paused video into an unrelated app and racks up in-app purchases within minutes.',
-        tip:'Set up parental controls and profiles before handing over any device for the first time — retrofitting restrictions after a habit forms is much harder.' },
+        tip:'Set up parental controls and profiles before handing over any device for the first time - retrofitting restrictions after a habit forms is much harder.' },
 
       { id:'p49', num:'P49', risk:'medium', title:'Sibling Supervision & Rough Play',
         who:'Families with more than one child',
         what:'Unsupervised rough play or "helpful" tasks between siblings that are beyond the older child\'s actual capability',
         where:'Bedrooms, living areas, wherever siblings play together',
         why:'An older sibling is not a substitute adult supervisor; well-meaning "helping" (carrying a baby, giving food) can create hazards neither child recognises.',
-        how:'Set clear rules about what older siblings can and cannot do unsupervised — no carrying babies, no giving food or small items to a younger sibling without an adult present; supervise rough-and-tumble play, especially with a size or age gap; praise gentle, cooperative play.',
+        how:'Set clear rules about what older siblings can and cannot do unsupervised - no carrying babies, no giving food or small items to a younger sibling without an adult present; supervise rough-and-tumble play, especially with a size or age gap; praise gentle, cooperative play.',
         measurement:'No child under 12 left as sole supervisor of a pre-schooler or younger sibling.',
         example:'A well-meaning 5-year-old gives a small toy part to a crawling younger sibling without recognising the choking risk.',
-        tip:'Give the older sibling a specific, safe "helper job" — fetching a nappy, singing to the baby — instead of open-ended "keep an eye on them" responsibility.' },
+        tip:'Give the older sibling a specific, safe "helper job" - fetching a nappy, singing to the baby - instead of open-ended "keep an eye on them" responsibility.' },
 
       { id:'p50', num:'P50', risk:'low', title:'Nightmares & Night Terrors',
         who:'Parents managing sleep disturbances common in this age group',
@@ -997,18 +1015,18 @@ const ZONES = [
         why:'Nightmares and night terrors are developmentally common between ages 3 and 6 and are usually not a sign of a serious problem, but they can be distressing without a calm, consistent response.',
         how:'Keep a calm, predictable bedtime routine; reassure after a nightmare without dwelling on frightening detail; for night terrors (screaming, appears awake but unresponsive), keep the child safe without trying to fully wake them, since they typically won\'t remember the episode; seek advice if episodes are frequent, prolonged or the child seems unwell.',
         measurement:'Night terrors typically resolve without intervention by school age; seek advice if occurring multiple times a week or lasting over 30 minutes.',
-        example:'A 4-year-old sits up screaming with eyes open but doesn\'t respond to their name — a classic night terror that resolves once the child settles back to sleep unaided.',
-        tip:'For a night terror, stay close and keep them safe rather than trying to wake them fully — waking mid-episode can prolong distress.' },
+        example:'A 4-year-old sits up screaming with eyes open but doesn\'t respond to their name - a classic night terror that resolves once the child settles back to sleep unaided.',
+        tip:'For a night terror, stay close and keep them safe rather than trying to wake them fully - waking mid-episode can prolong distress.' },
 
       { id:'p51', num:'P51', risk:'medium', title:'Separation Anxiety at Nursery/School Start',
         who:'Parents of a child starting or attending nursery/pre-school',
         what:'Distress at drop-off, or a lack of a consistent goodbye routine',
         where:'Nursery, pre-school drop-off',
         why:'Separation anxiety is developmentally normal in this age range and usually improves with a short, confident, consistent goodbye routine rather than prolonged, hesitant departures.',
-        how:'Keep goodbyes brief, warm and confident — a long, drawn-out or anxious goodbye can increase a child\'s distress; establish a consistent goodbye ritual (a phrase, a wave at the window); trust staff feedback that distress typically settles within minutes of departure.',
+        how:'Keep goodbyes brief, warm and confident - a long, drawn-out or anxious goodbye can increase a child\'s distress; establish a consistent goodbye ritual (a phrase, a wave at the window); trust staff feedback that distress typically settles within minutes of departure.',
         measurement:'Most separation distress settles within 10–15 minutes of a confident drop-off, per typical nursery experience.',
         example:'A parent who lingers anxiously at drop-off inadvertently signals to the child that there\'s something to worry about, prolonging the tears.',
-        tip:'A short, upbeat, consistent goodbye ritual — the same words, every time — reassures a child far more than a long, hesitant one.' },
+        tip:'A short, upbeat, consistent goodbye ritual - the same words, every time - reassures a child far more than a long, hesitant one.' },
 
       { id:'p52', num:'P52', risk:'medium', title:'Early Bullying Awareness',
         who:'Parents of pre-schoolers in group settings',
@@ -1018,9 +1036,9 @@ const ZONES = [
         how:'Ask open questions about nursery/school friendships regularly, not just "how was your day"; watch for behaviour changes (reluctance to attend, physical complaints, withdrawn play); teach the simple message "if someone is unkind, tell a grown-up" and follow up promptly with staff if concerns arise.',
         measurement:'Regular, specific check-ins (not just yes/no questions) about peer interactions at nursery/school.',
         example:'A child who suddenly refuses to attend nursery on certain days turns out to be avoiding a child who repeatedly excludes them from play.',
-        tip:'Ask "who did you play with today, and who didn\'t want to play with you?" — specific questions surface more than "was school good?"' },
+        tip:'Ask "who did you play with today, and who didn\'t want to play with you?" - specific questions surface more than "was school good?"' },
 
-      { id:'p53', num:'P53', risk:'critical', title:'Safe Touch vs Unsafe Touch — Reporting',
+      { id:'p53', num:'P53', risk:'critical', title:'Safe Touch vs Unsafe Touch - Reporting',
         who:'All parents, building on the PANTS conversation',
         what:'A child not knowing who to tell if something feels wrong',
         where:'Ongoing conversation, any setting',
@@ -1028,7 +1046,7 @@ const ZONES = [
         how:'Build a short list together of 3–4 trusted adults, both inside and outside the immediate family, the child can tell anything to without getting in trouble; reassure repeatedly that they will never be blamed for telling; practise the message "you can always tell me, even if someone said not to."',
         measurement:'Child can name at least 2–3 trusted adults by age 4–5, reinforced through the PANTS framework.',
         example:'A child who has practised naming trusted adults confidently tells a nursery key worker about something that upset them.',
-        tip:'Explicitly say "you will never get in trouble for telling me anything" — the fear of getting in trouble is what silences most children.' },
+        tip:'Explicitly say "you will never get in trouble for telling me anything" - the fear of getting in trouble is what silences most children.' },
 
       { id:'p54', num:'P54', risk:'high', title:'"If We Get Separated" Action Plan',
         who:'Parents visiting busy public places with a pre-schooler',
@@ -1038,7 +1056,7 @@ const ZONES = [
         how:'Before any crowded outing, agree a meeting point and practise the script "stop, stay where you are, find a helper" (see the stranger-awareness check); dress in memorable, easy-to-spot clothing in crowds; consider a temporary ID wristband with a contact number for very busy events.',
         measurement:'Meeting point agreed and stated out loud before every crowded outing.',
         example:'A family agrees "the big clock" as the meeting point before a busy market visit, and a briefly separated 5-year-old heads straight there.',
-        tip:'Point out and agree the meeting point together the moment you arrive somewhere new — make it a habit, not a one-off lecture.' },
+        tip:'Point out and agree the meeting point together the moment you arrive somewhere new - make it a habit, not a one-off lecture.' },
 
       { id:'p55', num:'P55', risk:'medium', title:'Emergency Contact Memorisation & ID',
         who:'Parents preparing a pre-schooler for growing independence',
@@ -1048,7 +1066,7 @@ const ZONES = [
         how:'Teach both parents\' full names and at least one phone number as a simple rhyme or song from around age 4; for very young or non-verbal children, consider a wristband with a contact number for outings; practise regularly, not just once.',
         measurement:'Full name recall achievable by most children by age 4–5 with practice; phone number recall varies but is a good goal by age 5–6.',
         example:'A 5-year-old who has practised the "phone number song" recites it clearly to help staff when briefly separated at an event.',
-        tip:'Turn the phone number into a simple tune — children remember songs far more reliably than plain facts.' },
+        tip:'Turn the phone number into a simple tune - children remember songs far more reliably than plain facts.' },
 
       { id:'p56', num:'P56', risk:'low', title:'Managing Fears Around Alarms & Emergencies',
         who:'Parents whose pre-schooler is sensitive to loud alarms, sirens or storms',
@@ -1058,14 +1076,14 @@ const ZONES = [
         how:'Explain what alarms are for in simple, reassuring language before a drill, not during one; let the child help test the smoke alarm so the sound becomes familiar and understood rather than frightening; comfort during storms while modelling calm rather than dismissing the fear.',
         measurement:'Fear response reassessed after each calm, planned exposure (such as an alarm test); most fears reduce with repeated calm familiarisation over weeks.',
         example:'A child terrified of the smoke alarm\'s test beep becomes comfortable after being allowed to press the test button themselves with a parent narrating what\'s happening.',
-        tip:'Let the child control the alarm test button themselves — active participation reduces fear faster than passive reassurance.' }
+        tip:'Let the child control the alarm test button themselves - active participation reduces fear faster than passive reassurance.' }
     ]
   },
   {
     id: 5, name: 'Outdoor, Garden & Playground', icon: '🌳',
     desc: '14 checks covering playground equipment, bicycles and scooters, garden hazards, sun safety, pets and toxic plants.',
     checks: [
-      { id:'p57', num:'P57', risk:'high', title:'Playground Equipment — Age-Appropriate & Safe',
+      { id:'p57', num:'P57', risk:'high', title:'Playground Equipment - Age-Appropriate & Safe',
         who:'Parents supervising playground visits',
         what:'A child using equipment designed for an older age group, or playing on equipment over an unsuitable surface',
         where:'Public and nursery/school playgrounds',
@@ -1073,9 +1091,9 @@ const ZONES = [
         how:'Choose equipment marked as age-appropriate for 3–6 year olds; check the surface underneath is impact-absorbing (rubber, bark chip, sand) rather than concrete or tarmac; supervise actively rather than watching from a distance, especially on climbing frames.',
         measurement:'BS EN 1176/1177 playground equipment and surfacing standards; supervision within quick-reach distance for climbing equipment.',
         example:'A 4-year-old attempts equipment designed for older children on a mixed-age playground and falls from a height beyond their coordination.',
-        tip:'Read the age-guidance sign at the playground gate — it exists precisely to prevent the fall your child is most at risk of at this age.' },
+        tip:'Read the age-guidance sign at the playground gate - it exists precisely to prevent the fall your child is most at risk of at this age.' },
 
-      { id:'p58', num:'P58', risk:'high', title:'Bicycles, Tricycles & Scooters — Helmets',
+      { id:'p58', num:'P58', risk:'high', title:'Bicycles, Tricycles & Scooters - Helmets',
         who:'Parents of pre-schoolers riding wheeled toys',
         what:'Riding without a correctly fitted helmet, or on surfaces with traffic exposure',
         where:'Driveways, pavements, parks, garden',
@@ -1083,7 +1101,7 @@ const ZONES = [
         how:'Fit a helmet meeting EN 1078 on every ride, checking it sits level (not tipped back) with a two-finger gap at the chin strap; supervise riding away from traffic and driveways with reversing vehicles; teach basic stopping and steering control before allowing more independent riding.',
         measurement:'EN 1078 certified helmet; level fit, two-finger chin strap gap, replaced after any significant impact.',
         example:'A 4-year-old rides a balance bike without a helmet "just in the driveway" and falls, striking the head on the kerb.',
-        tip:'Make "helmet on" as automatic as "seatbelt on" — no exceptions for short rides, since short rides cause plenty of falls too.' },
+        tip:'Make "helmet on" as automatic as "seatbelt on" - no exceptions for short rides, since short rides cause plenty of falls too.' },
 
       { id:'p59', num:'P59', risk:'high', title:'Garden Shed & Tool Storage',
         who:'Parents with garden sheds, tools or lawn equipment',
@@ -1093,27 +1111,27 @@ const ZONES = [
         how:'Keep the shed locked when not in use; store sharp tools on high hooks or in a locked box even inside a locked shed; never leave a running or recently used mower unattended with a child nearby.',
         measurement:'Shed locked at all times when unattended; sharp tools stored above 1.4m(55in) or locked separately.',
         example:'An unlocked shed left open while a parent fetches something allows a 4-year-old to find and pick up secateurs.',
-        tip:'Treat the shed like the kitchen knife drawer — a lock is the rule, not the exception.' },
+        tip:'Treat the shed like the kitchen knife drawer - a lock is the rule, not the exception.' },
 
       { id:'p60', num:'P60', risk:'critical', title:'Garden Chemicals, Pesticides & Fertiliser',
         who:'Parents storing gardening chemicals',
         what:'Weed killers, pesticides, slug pellets and fertilisers stored within reach or in unlabelled containers',
         where:'Garden shed, garage, garden storage',
-        why:'Many garden chemicals are highly toxic in small quantities and are sometimes brightly coloured — slug pellets in particular can resemble food to a curious child.',
+        why:'Many garden chemicals are highly toxic in small quantities and are sometimes brightly coloured - slug pellets in particular can resemble food to a curious child.',
         how:'Store all garden chemicals in original, labelled containers, locked or on high shelves out of reach; use child- and pet-safe alternatives where practical; never decant into unlabelled or food-style containers.',
         measurement:'All garden chemicals stored above 1.4m(55in) or locked; original labelling retained for poison-centre reference if needed.',
         example:'Blue slug pellets scattered near a vegetable patch are mistaken for sweets by a 3-year-old exploring the garden.',
-        tip:'If a product needs a poison symbol on the label, it needs a lock on the cupboard — no exceptions for "just the garden shed."' },
+        tip:'If a product needs a poison symbol on the label, it needs a lock on the cupboard - no exceptions for "just the garden shed."' },
 
       { id:'p61', num:'P61', risk:'high', title:'Trampoline Safety',
         who:'Families with a home trampoline',
         what:'Multiple children jumping together, no safety netting, or unsupervised trampoline use',
         where:'Garden trampoline',
-        why:'Trampoline injuries, particularly fractures, rise sharply when multiple children of different sizes jump together — a smaller child can be thrown off balance by a larger child\'s bounce even without collision.',
+        why:'Trampoline injuries, particularly fractures, rise sharply when multiple children of different sizes jump together - a smaller child can be thrown off balance by a larger child\'s bounce even without collision.',
         how:'Enforce one jumper at a time; fit full safety netting and check padding covers springs and the frame edge; supervise trampoline use actively, and place the trampoline on a level, soft-landing surface, not concrete.',
         measurement:'One jumper at a time; full enclosure netting; supervised use for ages 6 and under.',
         example:'A 4-year-old is thrown off balance and injured when an older sibling jumps on the same trampoline at the same time.',
-        tip:'"One at a time" is the single rule that prevents the most trampoline injuries — enforce it every time, no exceptions for siblings.' },
+        tip:'"One at a time" is the single rule that prevents the most trampoline injuries - enforce it every time, no exceptions for siblings.' },
 
       { id:'p62', num:'P62', risk:'medium', title:'Sun Safety During Outdoor Play',
         who:'Parents of pre-schoolers spending extended time outdoors',
@@ -1123,7 +1141,7 @@ const ZONES = [
         how:'Seek shade during the most intense sun hours, dress in loose, light, UV-protective clothing and a wide-brimmed hat, apply and reapply sunscreen (see the bathroom routine check), and offer water regularly during active outdoor play.',
         measurement:'Reapply sunscreen every 2 hours or after water play; offer water every 30–45 minutes during active outdoor play in warm weather.',
         example:'A morning at the park stretches into the hottest part of the day without a shade break or extra water offered.',
-        tip:'Bring a water bottle and a shade plan — tree, umbrella, canopy — to every outdoor outing as automatically as you bring sunscreen.' },
+        tip:'Bring a water bottle and a shade plan - tree, umbrella, canopy - to every outdoor outing as automatically as you bring sunscreen.' },
 
       { id:'p63', num:'P63', risk:'medium', title:'Insect Stings & Allergic Reactions',
         who:'Parents of pre-schoolers playing outdoors',
@@ -1132,7 +1150,7 @@ const ZONES = [
         why:'Most stings cause only local pain and swelling, but a minority of children can have a serious allergic reaction; knowing your own child\'s history and reaction pattern matters.',
         how:'Remove a bee sting promptly by scraping (not squeezing) to avoid injecting more venom; apply a cold compress for swelling; seek emergency care immediately for facial swelling, difficulty breathing, or widespread hives after a sting.',
         measurement:'Signs of a serious reaction (facial or throat swelling, breathing difficulty, widespread hives) require immediate emergency care.',
-        example:'A 4-year-old stung on the hand at a garden gathering develops facial swelling within minutes — a sign requiring urgent care.',
+        example:'A 4-year-old stung on the hand at a garden gathering develops facial swelling within minutes - a sign requiring urgent care.',
         tip:'If your child has ever had more than mild local swelling from a sting, discuss an action plan with your doctor before it happens again.' },
 
       { id:'p64', num:'P64', risk:'high', title:'Dog & Pet Safety',
@@ -1160,12 +1178,12 @@ const ZONES = [
         what:'Toxic plants, berries or seeds that a curious pre-schooler might sample',
         where:'Garden, parks, woodland outings',
         why:'Pre-schoolers explore the natural world hands-on and may put berries, seeds or leaves in their mouths out of curiosity; several common garden and wild plants are toxic if ingested.',
-        how:'Identify and remove or fence off known toxic plants in your own garden; teach a simple rule — "we don\'t eat anything from outside unless a grown-up says it\'s OK" — reinforced consistently; know which plants are toxic in your specific climate and garden.',
-        measurement:'Any suspected toxic plant ingestion — contact poison information services immediately with a sample or photo of the plant if possible.',
+        how:'Identify and remove or fence off known toxic plants in your own garden; teach a simple rule - "we don\'t eat anything from outside unless a grown-up says it\'s OK" - reinforced consistently; know which plants are toxic in your specific climate and garden.',
+        measurement:'Any suspected toxic plant ingestion - contact poison information services immediately with a sample or photo of the plant if possible.',
         example:'A child samples an unfamiliar berry from a garden shrub while playing unsupervised for a few minutes.',
-        tip:'Photograph and identify every plant in your garden once — knowing what\'s actually there removes the guesswork if ingestion is ever suspected.' },
+        tip:'Photograph and identify every plant in your garden once - knowing what\'s actually there removes the guesswork if ingestion is ever suspected.' },
 
-      { id:'p67', num:'P67', risk:'medium', title:'Supervised Risk — Climbing Trees & Low Structures',
+      { id:'p67', num:'P67', risk:'medium', title:'Supervised Risk - Climbing Trees & Low Structures',
         who:'Parents supporting healthy risky outdoor play',
         what:'Either overly restrictive prevention of all climbing, or unsupervised climbing beyond the child\'s actual ability',
         where:'Trees, garden walls, climbing frames, natural play areas',
@@ -1173,17 +1191,17 @@ const ZONES = [
         how:'Allow climbing on structures suited to the child\'s current ability, supervising from a position where you could catch a fall; talk through height and grip decisions with the child rather than only saying "no" or "be careful"; set a clear, age-appropriate height limit together.',
         measurement:'Supervision positioned to intervene within one second of a fall for climbing above standing height.',
         example:'A 5-year-old confidently climbs a low tree branch they have practised on several times, with a parent nearby rather than hovering underneath.',
-        tip:'Ask "how will you get down?" before they climb up — it builds real risk judgement far better than a blanket "get down."' },
+        tip:'Ask "how will you get down?" before they climb up - it builds real risk judgement far better than a blanket "get down."' },
 
-      { id:'p68', num:'P68', risk:'high', title:'Garden Water Play — Paddling Pools & Sprinklers',
+      { id:'p68', num:'P68', risk:'high', title:'Garden Water Play - Paddling Pools & Sprinklers',
         who:'Parents setting up garden water play in warm weather',
         what:'Unsupervised access to a filled paddling pool, even briefly',
         where:'Garden',
         why:'A paddling pool holds enough water to drown a small child in seconds, and this risk does not decrease just because the setting is a "fun," casual garden activity rather than a formal pool.',
-        how:'Empty and store paddling pools immediately after use — never leave one filled and unsupervised, even overnight; maintain the same arm\'s-reach supervision rule as for a bath or pool; keep the pool area separate from unsupervised access, such as behind a closed gate.',
+        how:'Empty and store paddling pools immediately after use - never leave one filled and unsupervised, even overnight; maintain the same arm\'s-reach supervision rule as for a bath or pool; keep the pool area separate from unsupervised access, such as behind a closed gate.',
         measurement:'Zero unsupervised access to any filled paddling pool; empty immediately after each use.',
         example:'A paddling pool left filled overnight "to save refilling it tomorrow" is found with a young visiting child playing at its edge unsupervised the next morning.',
-        tip:'Tip it, don\'t cover it — a covered pool still holds water and looks safer than it is; empty it fully every time.' },
+        tip:'Tip it, don\'t cover it - a covered pool still holds water and looks safer than it is; empty it fully every time.' },
 
       { id:'p69', num:'P69', risk:'medium', title:'Outdoor Craft Tools & Scissors',
         who:'Parents supervising outdoor craft and gardening activities',
@@ -1193,17 +1211,17 @@ const ZONES = [
         how:'Provide blunt-tipped, child-safe scissors for craft activities and supervise their use; keep adult garden tools (secateurs, shears) locked away or used only hand-in-hand with an adult; teach safe carrying (blade down, point away from the body) from the first use.',
         measurement:'Child-safe, blunt-tipped scissors only, unsupervised; adult tools always supervised.',
         example:'A 4-year-old is given adult secateurs to "help cut flowers" and receives a cut when the blades close unexpectedly.',
-        tip:'Teach the "walk with scissors closed, point down" rule from the very first time they pick up a pair — it becomes automatic with early repetition.' },
+        tip:'Teach the "walk with scissors closed, point down" rule from the very first time they pick up a pair - it becomes automatic with early repetition.' },
 
       { id:'p70', num:'P70', risk:'low', title:'Weather-Based Outdoor Play Decisions',
         who:'Parents deciding on outdoor play in extreme weather',
-        what:'Outdoor play continuing in conditions unsafe for a pre-schooler — extreme heat, cold or an approaching storm',
+        what:'Outdoor play continuing in conditions unsafe for a pre-schooler - extreme heat, cold or an approaching storm',
         where:'Garden, outdoor outings',
         why:'Pre-schoolers regulate body temperature less efficiently than adults and may not recognise or communicate that they are too hot, too cold, or in danger from an approaching storm.',
         how:'Check weather conditions before extended outdoor play; move indoors during a lightning storm and wait at least 30 minutes after the last thunder before returning outside; dress in layers for cold, and prioritise shade and hydration in heat; know local heat-illness warning signs (flushed skin, no sweating, lethargy).',
         measurement:'Move indoors for thunderstorms and wait at least 30 minutes after the last thunder; heat-illness signs require immediate shade, fluids and, if severe, emergency care.',
         example:'Outdoor play continues into a very hot afternoon without a shade or water break, and a child becomes flushed and unusually quiet.',
-        tip:'If you\'re checking the sky and thinking "should we head in," you already have your answer — trust that instinct early rather than waiting for the first raindrop.' }
+        tip:'If you\'re checking the sky and thinking "should we head in," you already have your answer - trust that instinct early rather than waiting for the first raindrop.' }
     ]
   },
   {
@@ -1218,7 +1236,7 @@ const ZONES = [
         how:'Keep the child in a rear- or forward-facing harnessed seat that meets UN R129 (i-Size) or an equivalent recognised standard, based on the manufacturer\'s height and weight limits, not a target age; check the harness or seatbelt route at every seasonal clothing change.',
         measurement:'UN R129/i-Size seats sized by height, not age; harness/seatbelt re-checked with every significant clothing change, especially winter coats.',
         example:'A child is moved to a forward-facing seat exactly on their 3rd birthday despite not yet reaching the seat\'s minimum forward-facing height.',
-        tip:'Check your seat\'s actual height and weight limits, not the box\'s suggested age range — the numbers on your child, not the calendar, decide the stage.' },
+        tip:'Check your seat\'s actual height and weight limits, not the box\'s suggested age range - the numbers on your child, not the calendar, decide the stage.' },
 
       { id:'p72', num:'P72', risk:'high', title:'Booster Seat Transition Timing',
         who:'Parents of pre-schoolers approaching booster-seat size',
@@ -1228,37 +1246,37 @@ const ZONES = [
         how:'Keep a harnessed seat until the child has clearly outgrown its height/weight limits, generally not before approximately 100cm(40in) tall and around 15kg(33lb) at the earliest, and often considerably later; check local regulations, which vary; a high-back booster with an adult seatbelt is only appropriate once seatbelt fit is correct.',
         measurement:'Booster transition guideline: not before roughly 100cm(40in)/15kg(33lb) as an absolute minimum, later where possible; belt must sit across the mid-shoulder and hip bones, not the neck or stomach.',
         example:'A small-for-age 5-year-old is moved to a booster seat because of their age, and the adult belt sits uncomfortably across their neck on every journey.',
-        tip:'When in doubt, stay in the harnessed seat longer — height and correct belt fit, not a birthday, should decide this transition.' },
+        tip:'When in doubt, stay in the harnessed seat longer - height and correct belt fit, not a birthday, should decide this transition.' },
 
       { id:'p73', num:'P73', risk:'high', title:'Harness & Seatbelt Fit Checks',
         who:'Parents fitting a pre-schooler into a car seat on every journey',
         what:'A loose, twisted or incorrectly positioned harness or seatbelt',
         where:'Every car journey',
         why:'A loose or twisted harness dramatically reduces a car seat\'s crash protection; children grow quickly at this age and seats need regular re-adjustment, not a one-time setup.',
-        how:'Use the "pinch test" — you should not be able to pinch excess webbing at the shoulder once buckled; ensure the chest clip sits at armpit level, not the stomach or neck; check harness height and length settings monthly as the child grows, and every time bulky clothing changes.',
-        measurement:'Pinch test — no excess webbing pinchable at the shoulder; chest clip at armpit level; re-check monthly and with clothing changes.',
+        how:'Use the "pinch test" - you should not be able to pinch excess webbing at the shoulder once buckled; ensure the chest clip sits at armpit level, not the stomach or neck; check harness height and length settings monthly as the child grows, and every time bulky clothing changes.',
+        measurement:'Pinch test - no excess webbing pinchable at the shoulder; chest clip at armpit level; re-check monthly and with clothing changes.',
         example:'A winter coat worn under the harness creates enough slack that the pinch test fails, though the harness looked "tight" by eye.',
-        tip:'Remove bulky coats before buckling in, and place a blanket over the child afterwards instead — it keeps the harness snug against the body where it actually protects.' },
+        tip:'Remove bulky coats before buckling in, and place a blanket over the child afterwards instead - it keeps the harness snug against the body where it actually protects.' },
 
       { id:'p74', num:'P74', risk:'critical', title:'Hot Car Danger',
         who:'All parents and caregivers transporting a pre-schooler',
         what:'A child left alone in a parked car, even briefly or "just running in"',
         where:'Any parked vehicle',
         why:'Car interior temperatures can rise dramatically within minutes even on a mild day, and a child\'s body overheats far faster than an adult\'s; heatstroke in hot cars is entirely preventable and remains a real risk at this age.',
-        how:'Never leave a child alone in a car for any length of time, for any reason; make a habit of checking the back seat every time you leave the vehicle — place a phone, bag or shoe in the back seat as a physical reminder; teach older pre-schoolers that a hot car is never a safe place to wait, even for a "quick errand."',
+        how:'Never leave a child alone in a car for any length of time, for any reason; make a habit of checking the back seat every time you leave the vehicle - place a phone, bag or shoe in the back seat as a physical reminder; teach older pre-schoolers that a hot car is never a safe place to wait, even for a "quick errand."',
         measurement:'Car interior temperature can rise significantly within 10 minutes even on a mild day; a child\'s core temperature rises 3–5 times faster than an adult\'s in heat.',
         example:'A parent runs into a shop "for one minute" leaving a sleeping child in the car, and the errand takes longer than planned.',
-        tip:'Put something you need — your phone, bag or one shoe — in the back seat every time you drive, so checking becomes physically unavoidable.' },
+        tip:'Put something you need - your phone, bag or one shoe - in the back seat every time you drive, so checking becomes physically unavoidable.' },
 
       { id:'p75', num:'P75', risk:'critical', title:'Road Crossing Awareness & the Kerb Drill',
         who:'Parents teaching road safety as independence grows',
         what:'A pre-schooler who hasn\'t yet been taught, or hasn\'t practised, safe road-crossing behaviour',
         where:'Roadsides, pavements, crossings',
         why:'Pre-schoolers cannot reliably judge vehicle speed and distance and should never cross a road alone at this age, but repeated, calm teaching of the kerb drill builds the foundation for independent road safety later.',
-        how:'Teach and practise "stop, look, listen, think" at every kerb, every single crossing, without exception, even when a road looks empty; always hold hands or a hand-link within reach of any road; model the behaviour yourself — a child copies what you do, not just what you say.',
+        how:'Teach and practise "stop, look, listen, think" at every kerb, every single crossing, without exception, even when a road looks empty; always hold hands or a hand-link within reach of any road; model the behaviour yourself - a child copies what you do, not just what you say.',
         measurement:'Hand-holding or a hand-link maintained near any road for this age group on 100% of crossings; kerb drill practised on every single crossing, not only "when it matters."',
         example:'A parent crosses quickly against a "don\'t walk" signal while distracted, and the child copies the same behaviour on a different road without the parent.',
-        tip:'Narrate the kerb drill out loud every time — "stop, look left, look right, listen" — so the child absorbs the process, not just the outcome.' },
+        tip:'Narrate the kerb drill out loud every time - "stop, look left, look right, listen" - so the child absorbs the process, not just the outcome.' },
 
       { id:'p76', num:'P76', risk:'high', title:'Walking to Nursery or School',
         who:'Parents beginning regular walking routes to nursery or school',
@@ -1268,7 +1286,7 @@ const ZONES = [
         how:'Maintain hand-holding or a wrist link on every walk near roads, regardless of how familiar the route feels; use high-visibility clothing or accessories in low light; identify and consistently use the safest crossing points on the route, even if slightly longer.',
         measurement:'Hand-hold/wrist-link maintained near roads on 100% of walks; high-visibility items used in low-light conditions.',
         example:'A parent, distracted by a phone call on a familiar route walked daily, lets go of a child\'s hand near a junction out of habit.',
-        tip:'Treat every walk like the first one — familiarity is exactly when supervision quietly slips.' },
+        tip:'Treat every walk like the first one - familiarity is exactly when supervision quietly slips.' },
 
       { id:'p77', num:'P77', risk:'high', title:'Scooter & Bike Road Safety',
         who:'Parents of pre-schoolers riding scooters or bikes near roads',
@@ -1278,7 +1296,7 @@ const ZONES = [
         how:'Keep riding to pavements, parks or closed areas away from live traffic until control and judgement are well established; always fit a correctly sized helmet (see the garden zone check); teach a firm "we stop at every kerb, every driveway" rule, dismounting near any road.',
         measurement:'Riding restricted to non-road areas at this age; dismount and walk across any road or driveway crossing.',
         example:'A confident scooter rider builds speed downhill toward a driveway exit and can\'t stop before the pavement edge.',
-        tip:'Set a physical "stop line" — a chalk mark, a driveway edge — the child must dismount at every time; a visual cue is more reliable than a verbal reminder at speed.' },
+        tip:'Set a physical "stop line" - a chalk mark, a driveway edge - the child must dismount at every time; a visual cue is more reliable than a verbal reminder at speed.' },
 
       { id:'p78', num:'P78', risk:'medium', title:'Car Door, Window & Child Lock Safety',
         who:'Parents of increasingly capable pre-schoolers in the car',
@@ -1288,7 +1306,7 @@ const ZONES = [
         how:'Activate child safety door locks and window lock-outs on every journey; supervise self-buckling if the child is learning but check the fit yourself every time (see the harness check); teach that doors only open once the car has fully stopped and an adult says it\'s safe.',
         measurement:'Child locks and window lock-outs engaged on 100% of journeys with a pre-schooler.',
         example:'A 4-year-old, curious about a passing view, opens a rear window further than intended and leans toward the gap at speed.',
-        tip:'Engage child locks as a standing habit at the start of every journey — make it part of your own seatbelt routine, not a separate thing to remember.' },
+        tip:'Engage child locks as a standing habit at the start of every journey - make it part of your own seatbelt routine, not a separate thing to remember.' },
 
       { id:'p79', num:'P79', risk:'high', title:'Kerb-Side Exit From the Car',
         who:'Parents unloading a pre-schooler from a parked car',
@@ -1298,37 +1316,37 @@ const ZONES = [
         how:'Establish a firm rule that the child always exits on the kerb or pavement side, never the traffic side, even if it means walking around the car; hold hands immediately upon exit, before the child takes a single step; use child locks to prevent opening the traffic-side door from inside.',
         measurement:'100% kerb-side exit rule enforced, regardless of convenience or how "quiet" the road appears.',
         example:'A quick roadside stop leads to a child exiting straight into the road on the driver\'s side because it was the nearer door.',
-        tip:'Make "kerb side always" as non-negotiable as the seatbelt itself — there are no quick exceptions for a "quiet" road.' },
+        tip:'Make "kerb side always" as non-negotiable as the seatbelt itself - there are no quick exceptions for a "quiet" road.' },
 
       { id:'p80', num:'P80', risk:'high', title:'Car Park & Parking Lot Safety',
         who:'Parents in car parks and parking areas with a pre-schooler',
         what:'A child running ahead, wandering, or being missed by a reversing vehicle in a car park',
         where:'Car parks, parking areas outside shops, nurseries and venues',
-        why:'Car parks combine moving vehicles, reversing drivers with limited visibility, and a child\'s tendency to run ahead with excitement — a high-risk combination that catches families off guard precisely because it doesn\'t feel like "the road."',
+        why:'Car parks combine moving vehicles, reversing drivers with limited visibility, and a child\'s tendency to run ahead with excitement - a high-risk combination that catches families off guard precisely because it doesn\'t feel like "the road."',
         how:'Hold hands or use a wrist link for the entire car park crossing, every time, treating it with the same seriousness as a road; teach the child never to run ahead in a car park; stay alert for reversing lights and engine sounds, not just moving vehicles.',
         measurement:'Hand-hold/wrist-link maintained for 100% of car park transit for this age group.',
         example:'An excited child races ahead toward a shop entrance across a car park while a reversing delivery van\'s driver cannot see them.',
-        tip:'Car parks deserve the same "hold hands, no exceptions" rule as a road crossing — treat them as more dangerous than they look, not less.' },
+        tip:'Car parks deserve the same "hold hands, no exceptions" rule as a road crossing - treat them as more dangerous than they look, not less.' },
 
       { id:'p81', num:'P81', risk:'critical', title:'Driveway & Reversing Vehicle Awareness',
         who:'Families with a home driveway or regularly parked vehicles',
         what:'A child playing behind or near a vehicle about to reverse, out of the driver\'s sightline',
         where:'Home driveway, garden gate onto a driveway',
-        why:'Driveway "backover" incidents involving young children are a recognised, preventable tragedy — reversing vehicles have significant blind spots that hide a small child completely.',
+        why:'Driveway "backover" incidents involving young children are a recognised, preventable tragedy - reversing vehicles have significant blind spots that hide a small child completely.',
         how:'Always know exactly where every child is before moving any vehicle, and do a visual walk-around check before reversing; keep young children indoors or securely away from the driveway during vehicle movement; fit a barrier or gate between play areas and the driveway where possible.',
         measurement:'Confirmed child location check before every vehicle movement, no exceptions; visual walk-around before reversing.',
         example:'A family member reverses out of a driveway assuming all children are indoors, not realising a 3-year-old followed a pet outside moments earlier.',
-        tip:'Make "where is every child?" a spoken, out-loud check before turning the key — a mental assumption is not the same as a verified answer.' },
+        tip:'Make "where is every child?" a spoken, out-loud check before turning the key - a mental assumption is not the same as a verified answer.' },
 
       { id:'p82', num:'P82', risk:'medium', title:'Travel & Holiday Accommodation Safety',
         who:'Families travelling with a pre-schooler',
-        what:'Unfamiliar accommodation with hazards not present at home — balconies, unfenced pools, unfamiliar hot water systems',
+        what:'Unfamiliar accommodation with hazards not present at home - balconies, unfenced pools, unfamiliar hot water systems',
         where:'Hotels, rentals, holiday accommodation',
         why:'A pre-schooler\'s hazard awareness is built around their familiar home environment; a new setting resets that awareness to zero, and unfamiliar risks (balconies, pool access, different door and window locks) are easy to overlook while relaxed on holiday.',
-        how:'Do a hazard sweep of any new accommodation on arrival, the same as a room re-check at home — balcony doors, pool access, medicine or chemical storage left by cleaning staff, hot water temperature; maintain the same supervision standards on holiday as at home, resisting the "we\'re relaxed now" temptation.',
+        how:'Do a hazard sweep of any new accommodation on arrival, the same as a room re-check at home - balcony doors, pool access, medicine or chemical storage left by cleaning staff, hot water temperature; maintain the same supervision standards on holiday as at home, resisting the "we\'re relaxed now" temptation.',
         measurement:'Hazard sweep completed within the first hour of arrival at any new accommodation.',
         example:'A balcony door with an unfamiliar, easy-to-operate lock is left unchecked on the first night of a holiday rental.',
-        tip:'Do the same five-minute hazard sweep you\'d do moving into a new home — holidays don\'t pause the risks, they just make them unfamiliar.' },
+        tip:'Do the same five-minute hazard sweep you\'d do moving into a new home - holidays don\'t pause the risks, they just make them unfamiliar.' },
 
       { id:'p83', num:'P83', risk:'high', title:'Stranger Safety in Public Places',
         who:'Parents navigating busy public places with a pre-schooler',
@@ -1338,7 +1356,7 @@ const ZONES = [
         how:'Use a hand-hold, wrist link or reins in busy places rather than relying on verbal reminders alone; do regular head-counts when in a group; identify a specific meeting point on arrival at any new venue as a backup to prevention.',
         measurement:'Continuous hand-hold/wrist-link in crowded venues; meeting point agreed on arrival, every visit.',
         example:'A child ducks between clothing racks in a busy shop and is briefly out of sight before being found near the entrance.',
-        tip:'The safest strategy is preventing separation in the first place — reins or hand-holding in crowds do more than any script recited afterwards.' },
+        tip:'The safest strategy is preventing separation in the first place - reins or hand-holding in crowds do more than any script recited afterwards.' },
 
       { id:'p84', num:'P84', risk:'critical', title:'School/Nursery Run Handover Safety',
         who:'Parents and nursery/school staff managing daily pick-up and drop-off',
@@ -1348,7 +1366,7 @@ const ZONES = [
         how:'Confirm your nursery/school\'s authorised-collector policy and keep the list updated with any changes; agree a family password system for any one-off collection by someone not on the usual list; teach the child that they only leave with someone on "mummy and daddy\'s list," reinforcing they can say so themselves if unsure.',
         measurement:'Authorised-collector list reviewed and updated at least termly, or immediately after any change in circumstances.',
         example:'A last-minute change means a family friend collects the child; because the family had a password system in place, staff can confirm the collection safely.',
-        tip:'Set up the password system with your nursery/school before you ever need it — arranging it in a rush, on the day, is when mistakes happen.' }
+        tip:'Set up the password system with your nursery/school before you ever need it - arranging it in a rush, on the day, is when mistakes happen.' }
     ]
   }
 ];
@@ -1363,12 +1381,12 @@ function injectIcons(){
 // ═══════════════════════════════════════════
 const STORE_KEY = 'safelife-preschooler-pro';
 const completed = new Set();
-let lang = 'en', theme = 'pink', mode = 'light', riskFilter = null, activeZone = 1;
+let lang = 'en', mode = 'light', riskFilter = null, activeZone = 1;
 const TOTAL = 84;
 
 function t(key){ return (I18N[lang] && I18N[lang][key]) || I18N.en[key] || key; }
 function persist(){
-  try{ localStorage.setItem(STORE_KEY, JSON.stringify({completed:[...completed], lang, theme, mode})); }catch(e){}
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify({completed:[...completed], lang, mode})); }catch(e){}
 }
 function restore(){
   try{
@@ -1376,8 +1394,7 @@ function restore(){
     if(!raw) return;
     const d = JSON.parse(raw);
     (d.completed||[]).forEach(id=>completed.add(id));
-    if(false && d.lang && I18N[d.lang]) lang = d.lang; /* language switching disabled for English-only release — remove "false &&" to re-enable */
-    if(d.theme) theme = d.theme;
+    if(false && d.lang && I18N[d.lang]) lang = d.lang; /* language switching disabled for English-only release - remove "false &&" to re-enable */
     if(d.mode) mode = d.mode;
   }catch(e){}
 }
@@ -1544,31 +1561,6 @@ function applyFilters(){
 // ═══════════════════════════════════════════
 // THEMES / MODE / LANGUAGE
 // ═══════════════════════════════════════════
-const THEMES = [
-  {id:'pink',   name:'Playful Pink',  c:'#EC4899'},
-  {id:'teal',   name:'Teal Calm',     c:'#14B8A6'},
-  {id:'amber',  name:'Warm Amber',    c:'#F59E0B'},
-  {id:'rose',   name:'Rose Care',     c:'#E11D48'},
-  {id:'violet', name:'Gentle Violet', c:'#7C3AED'},
-  {id:'ocean',  name:'Ocean Blue',    c:'#2563EB'},
-  {id:'forest', name:'Forest Green',  c:'#16A34A'}
-];
-function buildThemeMenu(){
-  const dd = document.getElementById('dd-theme');
-  dd.innerHTML = '<div class="dropdown-title">' + t('theme') + '</div>';
-  THEMES.forEach(th=>{
-    const row = document.createElement('button');
-    row.className = 'theme-row' + (th.id === theme ? ' selected' : '');
-    row.innerHTML = '<span class="theme-swatch" style="background:' + th.c + '"></span>' + th.name + (th.id === theme ? '<span class="check-mark">✓</span>' : '');
-    row.addEventListener('click', e=>{
-      e.stopPropagation();
-      theme = th.id;
-      document.body.dataset.theme = theme;
-      buildThemeMenu(); persist();
-    });
-    dd.appendChild(row);
-  });
-}
 function buildLangMenu(){
   const dd = document.getElementById('dd-lang');
   dd.innerHTML = '<div class="dropdown-title">🌐 Language</div>';
@@ -1602,7 +1594,6 @@ function toggleDropdown(id, e){
   document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open'));
   if(!wasOpen) dd.classList.add('open');
 }
-document.getElementById('btn-theme').addEventListener('click', e=>toggleDropdown('dd-theme', e));
 document.getElementById('btn-lang').addEventListener('click', e=>toggleDropdown('dd-lang', e));
 document.addEventListener('click', ()=>document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open')));
 document.getElementById('btn-mode').addEventListener('click', function(){
@@ -1616,7 +1607,7 @@ document.getElementById('btn-mode').addEventListener('click', function(){
 // SAVE / LOAD PROGRESS
 // ═══════════════════════════════════════════
 document.getElementById('btn-save').addEventListener('click', ()=>{
-  const data = { product:'SafeLife', module:'preschooler-3-6', version:1, savedAt:new Date().toISOString(), completed:[...completed], lang, theme, mode };
+  const data = { product:'SafeLife', module:'preschooler-3-6', version:1, savedAt:new Date().toISOString(), completed:[...completed], lang, mode };
   const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
@@ -1634,14 +1625,12 @@ document.getElementById('load-file').addEventListener('change', function(){
       if(d.module !== 'preschooler-3-6' && !confirm('This file was saved from a different module. Load anyway?')) return;
       completed.clear();
       (d.completed||[]).forEach(id=>completed.add(id));
-      if(false && d.lang && I18N[d.lang]) lang = d.lang; /* language switching disabled for English-only release — remove "false &&" to re-enable */
-      if(d.theme) theme = d.theme;
+      if(false && d.lang && I18N[d.lang]) lang = d.lang; /* language switching disabled for English-only release - remove "false &&" to re-enable */
       if(d.mode) mode = d.mode;
-      document.body.dataset.theme = theme;
       document.body.dataset.mode = mode;
       document.getElementById('btn-mode').textContent = mode === 'light' ? '🌙' : '☀️';
-      applyLang(); renderAll(); buildThemeMenu(); buildLangMenu(); persist();
-    }catch(e){ alert('Could not read that file — is it a SafeLife progress file?'); }
+      applyLang(); renderAll(); buildLangMenu(); persist();
+    }catch(e){ alert('Could not read that file - is it a SafeLife progress file?'); }
   };
   reader.readAsText(file);
   this.value = '';
@@ -1719,28 +1708,28 @@ function buildManual(){
 }
 
 const GOLDEN_RULES = [
-  'Pool and spa fully isolation-fenced with a self-closing, self-latching gate — never rely on supervision alone',
-  'PANTS body-safety rules taught from age 3 — private parts are private, no secrets, always tell',
-  'Round or hard foods cut small and eaten sitting down — running or playing while eating is the top choking trigger now',
-  'Button batteries and magnets locked away — two swallowed magnets can tear the bowel within hours',
+  'Pool and spa fully isolation-fenced with a self-closing, self-latching gate - never rely on supervision alone',
+  'PANTS body-safety rules taught from age 3 - private parts are private, no secrets, always tell',
+  'Round or hard foods cut small and eaten sitting down - running or playing while eating is the top choking trigger now',
+  'Button batteries and magnets locked away - two swallowed magnets can tear the bowel within hours',
   'Helmet on every bike, scooter or trike ride, fitted level and snug (EN 1078)',
-  'Practise the kerb drill — stop, look, listen — on every walk, every time, from age 3',
+  'Practise the kerb drill - stop, look, listen - on every walk, every time, from age 3',
   'Car seat stays rear- or forward-facing by height and weight, never rushed to a booster early (UN R129/i-Size)',
-  'Never leave a child alone in a car, bath, pool or garden pond — not even for a minute',
-  'Sun protection every outdoor day — shade, hat, clothing, then sunscreen',
+  'Never leave a child alone in a car, bath, pool or garden pond - not even for a minute',
+  'Sun protection every outdoor day - shade, hat, clothing, then sunscreen',
   'Agree a family password and an "if we get separated" plan before every outing'
 ];
 const KEY_NUMBERS = [
   ['Pool fencing','1.2m (4 ft) minimum height · self-closing, self-latching gate'],
-  ['Car seat','i-Size/UN R129 — by height, not age; keep rear-facing as long as possible'],
-  ['Booster transition','not before ≈100cm (40 in) tall and ≈15kg (33 lb) — height-based, check local law'],
+  ['Car seat','i-Size/UN R129 - by height, not age; keep rear-facing as long as possible'],
+  ['Booster transition','not before ≈100cm (40 in) tall and ≈15kg (33 lb) - height-based, check local law'],
   ['Bike/scooter helmet','EN 1078 · level fit, 2-finger chin strap gap'],
   ['Choking 1–6 yrs','5 back blows + 5 abdominal thrusts (ILCOR)'],
   ['Round foods','quartered lengthwise until age 5'],
   ['Screen time','≤1 hour/day, ages 3–6 (WHO)'],
   ['Sun protection','SPF 30+ broad-spectrum, reapply every 2 hours'],
-  ['Bath/pool water','never unsupervised — arm\'s reach for non-swimmers'],
-  ['Drowning risk','silent and fast — seconds, not minutes'],
+  ['Bath/pool water','never unsupervised - arm\'s reach for non-swimmers'],
+  ['Drowning risk','silent and fast - seconds, not minutes'],
   ['Medicine storage','child-resistant caps (ISO 8317), locked, out of sight'],
   ['Hot water at the tap','46–50°C (115–122°F) via a thermostatic mixing valve'],
   ['Walking to nursery/school','hold hands or reins within 2m (6.5 ft) of any road'],
@@ -1820,7 +1809,7 @@ function renderContactRows(){
 function buildCheatPrint(){
   const esc = s => String(s).replace(/</g,'&lt;');
   const filled = contacts.list.filter(c=>c[0] || c[1]);
-  const chips = filled.map(h=>'<div class="cp-chip"><b>' + esc(h[0]||'—') + '</b><span>' + (esc(h[1]) || '____________') + '</span></div>').join('');
+  const chips = filled.map(h=>'<div class="cp-chip"><b>' + esc(h[0]||'-') + '</b><span>' + (esc(h[1]) || '____________') + '</span></div>').join('');
   const rules = GOLDEN_RULES.map(r=>'<li>' + r + '</li>').join('');
   const nums = KEY_NUMBERS.map(n=>'<tr><td><strong>' + n[0] + '</strong></td><td>' + n[1] + '</td></tr>').join('');
   const activeQR = getSavedQR() || QR_IMAGE;
@@ -1858,7 +1847,7 @@ function sellerRenderLocked(){
   document.getElementById('seller-body').innerHTML = hasPin
     ? '<p>Enter your PIN to manage this file\'s QR code.</p><input type="password" inputmode="numeric" maxlength="12" id="seller-pin-input" placeholder="PIN" style="width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--tile);color:var(--ink);font-size:15px;letter-spacing:2px;margin-bottom:10px;">'
       + '<div class="modal-actions"><button class="btn btn-primary" id="seller-unlock">Unlock</button></div>'
-    : '<p>No PIN set yet for this file. Create one now — you\'ll need it to change the QR code later. Every product file keeps its own separate PIN and QR code.</p>'
+    : '<p>No PIN set yet for this file. Create one now - you\'ll need it to change the QR code later. Every product file keeps its own separate PIN and QR code.</p>'
       + '<input type="password" inputmode="numeric" maxlength="12" id="seller-pin-new" placeholder="Create a PIN" style="width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--tile);color:var(--ink);font-size:15px;letter-spacing:2px;margin-bottom:8px;">'
       + '<input type="password" inputmode="numeric" maxlength="12" id="seller-pin-confirm" placeholder="Confirm PIN" style="width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--tile);color:var(--ink);font-size:15px;letter-spacing:2px;margin-bottom:10px;">'
       + '<div class="modal-actions"><button class="btn btn-primary" id="seller-setpin">Set PIN</button></div>';
@@ -1881,7 +1870,7 @@ function sellerRenderLocked(){
 function sellerRenderUnlocked(){
   const current = getSavedQR();
   document.getElementById('seller-body').innerHTML =
-    '<p>Upload this product\'s QR code image. It replaces the placeholder on the printed cheat sheet — saved on this device only, separately for every product file.</p>' +
+    '<p>Upload this product\'s QR code image. It replaces the placeholder on the printed cheat sheet - saved on this device only, separately for every product file.</p>' +
     (current ? '<img src="' + current + '" style="width:110px;height:110px;border:1px solid var(--line);border-radius:9px;margin-bottom:10px;object-fit:contain;background:#fff;">' : '') +
     '<input type="file" accept="image/*" id="seller-qr-file" style="margin-bottom:10px;">' +
     '<div class="modal-actions">' +
@@ -1936,15 +1925,15 @@ const SITUATION_MODULES = [
   {name:'Twins & Multiples', sub:'Situation Module', status:'available', emoji:'👯'},
   {name:'Babysitter/Nanny Handover', sub:'Situation Module', status:'available', emoji:'🗒️'},
   {name:'Dementia & Alzheimer\'s Care', sub:'Situation Module', status:'available', emoji:'🏠'},
-  {name:'Injury & Post-Surgery Recovery', sub:'Coming Soon', status:'available', emoji:'🩹'},
-  {name:'Chronic Conditions Household', sub:'Coming Soon', status:'available', emoji:'💊'},
-  {name:'Limited Mobility / Wheelchair', sub:'Coming Soon', status:'available', emoji:'♿'},
+  {name:'Injury & Post-Surgery Recovery', sub:'Situation Module', status:'available', emoji:'🩹'},
+  {name:'Chronic Conditions Household', sub:'Situation Module', status:'available', emoji:'💊'},
+  {name:'Limited Mobility / Wheelchair', sub:'Situation Module', status:'available', emoji:'♿'},
   {name:'Visually / Hearing Impaired', sub:'Situation Module', status:'available', emoji:'🔔'},
-  {name:'New Pet + Baby Household', sub:'Coming Soon', status:'coming', emoji:'🐾'},
-  {name:'The Caregiver\'s Own Safety', sub:'Coming Soon', status:'coming', emoji:'🤲'},
-  {name:'New Home Move-In Audit', sub:'Coming Soon', status:'coming', emoji:'🏠'},
-  {name:'Farm & Rural Household', sub:'Coming Soon', status:'coming', emoji:'🚜'},
-  {name:'Home Office / WFH', sub:'Coming Soon', status:'coming', emoji:'💻'}
+  {name:'New Pet + Baby Household', sub:'Situation Module', status:'available', emoji:'🐾'},
+  {name:'The Caregiver\'s Own Safety', sub:'Situation Module', status:'available', emoji:'🤲'},
+  {name:'New Home Move-In Audit', sub:'Situation Module', status:'available', emoji:'🏠'},
+  {name:'Farm & Rural Household', sub:'Situation Module', status:'available', emoji:'🚜'},
+  {name:'Home Office / WFH', sub:'Situation Module', status:'available', emoji:'💻'}
 ];
 function buildSituationGrid(){
   const grid = document.getElementById('situation-grid');
@@ -1979,13 +1968,11 @@ function buildCollection(){
 // ═══════════════════════════════════════════
 restore();
 injectIcons();
-document.body.dataset.theme = theme;
 document.body.dataset.mode = mode;
 document.getElementById('btn-mode').textContent = mode === 'light' ? '🌙' : '☀️';
 applyLang();
 fillStats();
 renderAll();
-buildThemeMenu();
 buildLangMenu();
 buildManual();
 buildCheat();
